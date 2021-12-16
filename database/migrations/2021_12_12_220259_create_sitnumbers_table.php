@@ -15,8 +15,8 @@ class CreateSitnumbersTable extends Migration
     {
         Schema::create('sitnumbers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('student_id');
-            $table->unsignedBigInteger('squad_id');
+            $table->unsignedBigInteger('student_id')->nullable();
+            $table->unsignedBigInteger('squad_id')->nullable();
             $table->integer('sit_number');
             $table->timestamps();
 

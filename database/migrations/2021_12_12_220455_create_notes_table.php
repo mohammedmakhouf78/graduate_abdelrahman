@@ -17,8 +17,8 @@ class CreateNotesTable extends Migration
             $table->id();
             $table->text('note');
             $table->date('note_date');
-            $table->unsignedBigInteger('type_id');
-            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('type_id')->nullable();
+            $table->unsignedBigInteger('student_id')->nullable();
             $table->timestamps();
 
             $table->foreign('student_id')

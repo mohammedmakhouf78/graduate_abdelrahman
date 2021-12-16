@@ -17,11 +17,11 @@ class CreateExamsTable extends Migration
             $table->id();
             $table->date('exam_date');
             $table->float('full_mark');
-            $table->unsignedBigInteger('subject_id');
-            $table->unsignedBigInteger('department_id');
-            $table->unsignedBigInteger('squad_id');
-            $table->unsignedBigInteger('professor_id');
-            $table->unsignedBigInteger('professor_assistant_id');
+            $table->unsignedBigInteger('subject_id')->nullable();
+            $table->unsignedBigInteger('department_id')->nullable();
+            $table->unsignedBigInteger('squad_id')->nullable();
+            $table->unsignedBigInteger('professor_id')->nullable();
+            $table->unsignedBigInteger('professor_assistant_id')->nullable();
             $table->timestamps();
 
             $table->foreign('subject_id')

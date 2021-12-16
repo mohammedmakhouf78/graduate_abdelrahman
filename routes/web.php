@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ArmyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // return view('pages.home.index');
+});
+
+Route::prefix('students')->group(function () {
+    Route::resource('army',ArmyController::class);
 });

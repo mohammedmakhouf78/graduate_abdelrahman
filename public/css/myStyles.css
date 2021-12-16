@@ -1,0 +1,14 @@
+input,
+form,
+#success {
+    direction: rtl;
+    text-align: right;
+}
+
+.card-header h3 {
+    float: right;
+}
+
+th {
+    text-transform: capitalize;
+}

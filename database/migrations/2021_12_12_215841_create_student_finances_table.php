@@ -18,8 +18,8 @@ class CreateStudentFinancesTable extends Migration
             $table->float('paid');
             $table->float('rest_money');
             $table->float('money_from_prev_years');
-            $table->unsignedBigInteger('finance_id');
-            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('finance_id')->nullable();
+            $table->unsignedBigInteger('student_id')->nullable();
             $table->date('paid_date');
             $table->string('paid_id_number');
             $table->timestamps();

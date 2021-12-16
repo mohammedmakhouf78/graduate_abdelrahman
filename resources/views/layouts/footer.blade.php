@@ -17,7 +17,7 @@
 
 <!-- REQUIRED SCRIPTS -->
 <!-- jQuery -->
-<script src="{{ asset('/adminLTE') }}/plugins/jquery/jquery.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/jquery/jquery.js"></script>
 <!-- Bootstrap -->
 <script src="{{ asset('/adminLTE') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- overlayScrollbars -->
@@ -38,6 +38,34 @@
 <script src="{{ asset('/adminLTE') }}/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('/adminLTE') }}/dist/js/pages/dashboard2.js"></script>
+
+
+
+{{-- data table blugins --}}
+<script src="{{ asset('/adminLTE') }}/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/jszip/jszip.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="{{ asset('/adminLTE') }}/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+
+<script>
+    $( document ).ready(function() {
+        setTimeout(() => {
+            $('#success').slideUp('slow')
+            $('#myError').slideUp('slow')
+        }, 3000);
+    });
+</script>
+
+@yield('specificScript')
 </body>
 
 </html>

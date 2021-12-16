@@ -27,17 +27,17 @@ class CreateStudentsTable extends Migration
             $table->string('home_phone');
             $table->string('identity_card');
             $table->text('image');
-            $table->unsignedBigInteger('status_id');
-            $table->unsignedBigInteger('nationality_id');
-            $table->unsignedBigInteger('city_id');
-            $table->unsignedBigInteger('center_id');
-            $table->unsignedBigInteger('qualification_id');
-            $table->unsignedBigInteger('army_id');
-            $table->unsignedBigInteger('squad_id');
-            $table->unsignedBigInteger('department_id');
-            $table->unsignedBigInteger('coming_from');
-            $table->unsignedBigInteger('going_to');
-            $table->unsignedBigInteger('payment_state_id');
+            $table->unsignedBigInteger('status_id')->nullable();
+            $table->unsignedBigInteger('nationality_id')->nullable();
+            $table->unsignedBigInteger('city_id')->nullable();
+            $table->unsignedBigInteger('center_id')->nullable();
+            $table->unsignedBigInteger('qualification_id')->nullable();
+            $table->unsignedBigInteger('army_id')->nullable();
+            $table->unsignedBigInteger('squad_id')->nullable();
+            $table->unsignedBigInteger('department_id')->nullable();
+            $table->unsignedBigInteger('coming_from')->nullable();
+            $table->unsignedBigInteger('going_to')->nullable();
+            $table->unsignedBigInteger('payment_state_id')->nullable();
             $table->timestamps();
 
             $table->foreign('status_id')

@@ -17,7 +17,7 @@ class CreateInstallmentsTable extends Migration
             $table->id();
             $table->float('value');
             $table->date('pay_date');
-            $table->unsignedBigInteger('student_finance_id');
+            $table->unsignedBigInteger('student_finance_id')->nullable();
             $table->timestamps();
 
             $table->foreign('student_finance_id')
