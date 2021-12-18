@@ -6,8 +6,8 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">المواقف من التجنيد</h3>
-            <a href="{{route('army.create')}}" class="btn btn-success">Create</a>
+            <h3 class="card-title">المراكز</h3>
+            <a href="{{route('center.create')}}" class="btn btn-success">Create</a>
             @if (session()->has('success'))
             <div class="alert alert-success" id="success">
                 {{session()->get('success')}}
@@ -20,7 +20,7 @@
                 <thead>
                     <tr>
                         <th>id</th>
-                        <th>army</th>
+                        <th>center</th>
                         <th>action</th>
                     </tr>
                 </thead>
@@ -28,12 +28,12 @@
                     @foreach ($all as $item)
                     <tr>
                         <td>{{$item->id}}</td>
-                        <td>{{$item->army}}</td>
+                        <td>{{$item->center}}</td>
                         <td class="text-right">
-                            <a class="btn btn-primary" href="{{route('army.edit',$item->id)}}">
+                            <a class="btn btn-primary" href="{{route('center.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
                             </a>
-                            <form method="POST" action="{{route('army.destroy',$item->id)}}">
+                            <form method="POST" action="{{route('center.destroy',$item->id)}}">
                                 @csrf
                                 @method('DELETE')
                                 <input type="hidden" name="id" value="{{$item->id}}">
@@ -48,7 +48,7 @@
                 <tfoot>
                     <tr>
                         <th>id</th>
-                        <th>army</th>
+                        <th>center</th>
                         <th>action</th>
                     </tr>
                 </tfoot>

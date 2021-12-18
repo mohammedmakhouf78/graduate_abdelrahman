@@ -62,7 +62,7 @@ class ArmyController extends Controller
      */
     public function edit(Army $army)
     {
-        return view('admin.pages.about.edit',compact('army'));
+        return view('pages.army.edit',compact('army'));
     }
 
     /**
@@ -87,9 +87,10 @@ class ArmyController extends Controller
      * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy(Army $army)
     {
-        
+        $army->delete();
+        return redirect()->back()->with('success','تمت العملية بنجاح');
     }
 
     private function validation()

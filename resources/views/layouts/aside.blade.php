@@ -36,8 +36,8 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-                <li class="nav-item {{Request::is('home/') ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{Request::is('home/') ? 'active' : ''}}">
+                <li class="nav-item {{Request::is('home/*') ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{Request::is('home/*') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             الاعدادات الرئيسية
@@ -58,8 +58,8 @@
 
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-                <li class="nav-item {{Request::is('students/') ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{Request::is('students/army') ? 'active' : ''}}">
+                <li class="nav-item {{Request::is('students/*') ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{Request::is('students/army*') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             بيانات الطلاب الفرعية
@@ -70,7 +70,13 @@
                         <li class="nav-item">
                             <a href="{{route('army.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>الجيش</p>
+                                <p>مواقف التجنيد</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('center.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المراكز</p>
                             </a>
                         </li>
                     </ul>

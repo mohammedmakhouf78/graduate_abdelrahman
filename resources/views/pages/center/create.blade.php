@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 <div class="col-md-6">
     <!-- general form elements -->
     <div class="card card-primary">
@@ -15,17 +17,15 @@
         @endif
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{route('army.update',$army->id)}}" method="POST">
+        <form action="{{route('center.store')}}" method="POST">
             @csrf
-            @method('PUT')
             <div class="card-body">
                 <div class="form-group">
-                    <label for="army">تعديل موقف من التجنيد</label>
-                    <input type="text" class="form-control" id="army" placeholder="اكتب هنا" name="army"
-                        value="{{$army->army}}">
+                    <label for="center">اسم المركز</label>
+                    <input type="text" class="form-control" id="center" placeholder="اكتب هنا" name="center">
                 </div>
-                @error('army')
-                <p class="text-danger" id="myError">يجب ادخال موقف التجنيد </p>
+                @error('center')
+                <p class="text-danger" id="myError">يجب ادخال اسم المركز </p>
                 @enderror
             </div>
             <!-- /.card-body -->
@@ -37,5 +37,7 @@
     </div>
     <!-- /.card -->
 </div>
+
+
 
 @endsection
