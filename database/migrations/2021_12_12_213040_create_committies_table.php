@@ -20,6 +20,12 @@ class CreateCommittiesTable extends Migration
             $table->integer('start_from');
             $table->integer('end_to');
             $table->timestamps();
+
+
+            $table->foreign('floor_id')
+            ->references('id')
+            ->on('floors')
+            ->onDelete('set null');
         });
     }
 

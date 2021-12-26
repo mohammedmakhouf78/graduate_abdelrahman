@@ -25,9 +25,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($all as $item)
+                    @foreach ($all as $index => $item)
                     <tr>
-                        <td>{{$item->id}}</td>
+                        <td>{{++$index}}</td>
                         <td>{{$item->center}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route('center.edit',$item->id)}}">

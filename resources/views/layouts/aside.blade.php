@@ -34,54 +34,302 @@
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-                <li class="nav-item {{Request::is('home/*') ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{Request::is('home/*') ? 'active' : ''}}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            الاعدادات الرئيسية
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./index.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>عدادات الموقع</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
 
 
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-                <li class="nav-item {{Request::is('students/*') ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{Request::is('students/army*') ? 'active' : ''}}">
+
+                {{-- students --}}
+                <li class="nav-item {{currentRequest('students') ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{currentRequest('students') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            بيانات الطلاب الفرعية
+                            الطلبة
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
+                    <ul class="nav nav-treeview" style="display: {{currentRequest('students') ? 'block' : 'none'}};">
                         <li class="nav-item">
-                            <a href="{{route('army.index')}}" class="nav-link">
+                            <a href="{{route('army.index')}}"
+                                class="nav-link {{currentRequest('students/army') ? 'active' : ''}}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>مواقف التجنيد</p>
+                                <p>موقف التجنيد</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('center.index')}}" class="nav-link">
+                            <a href="{{route('center.index')}}"
+                                class="nav-link {{currentRequest('students/center') ? 'active' : ''}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>المراكز</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('city.index')}}"
+                                class="nav-link {{currentRequest('students/city') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المدن</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('decisiontype.index')}}"
+                                class="nav-link {{currentRequest('students/decisiontype') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>أنواع القرارات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('department.index')}}"
+                                class="nav-link {{currentRequest('students/department') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الأقسام</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('nationality.index')}}"
+                                class="nav-link {{currentRequest('students/nationality') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الجنسيات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('notetype.index')}}"
+                                class="nav-link {{currentRequest('students/notetype') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>انواع الملاحظات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('organization.index')}}"
+                                class="nav-link {{currentRequest('students/organization') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المنظمات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('qualification.index')}}"
+                                class="nav-link {{currentRequest('students/qualification') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المؤهلات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('squad.index')}}"
+                                class="nav-link {{currentRequest('students/squad') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الفرقة</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('status.index')}}"
+                                class="nav-link {{currentRequest('students/status') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الحالات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('sutdent.index')}}"
+                                class="nav-link {{currentRequest('students/sutdent') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الطلاب</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('studentphone.index')}}"
+                                class="nav-link {{currentRequest('students/studentphone') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>تلفونات الطلاب</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('note.index')}}"
+                                class="nav-link {{currentRequest('students/note') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الملاحظات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('decision.index')}}"
+                                class="nav-link {{currentRequest('students/decision') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>القرارات</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
+
+
+
+
+                {{-- الموظفين --}}
+                <li class="nav-item {{currentRequest('employees') ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{currentRequest('employees') ? 'active' : ''}}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            الموظفين
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" style="display: {{currentRequest('employees') ? 'block' : 'none'}};">
+                        <li class="nav-item">
+                            <a href="{{route('employee.index')}}"
+                                class="nav-link {{currentRequest('employees/employee') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الموظفين</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('employeephone.index')}}"
+                                class="nav-link {{currentRequest('employees/employeephone') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>تلفونات الموظفين</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('observer.index')}}"
+                                class="nav-link {{currentRequest('employees/observer') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المراقبين</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('professor.index')}}"
+                                class="nav-link {{currentRequest('employees/professor') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الدكاترة</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('professor_assistant.index')}}"
+                                class="nav-link {{currentRequest('employees/professor_assistant') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المعيدين</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('professorprofessorassistant.index')}}"
+                                class="nav-link {{currentRequest('employees/professorprofessorassistant') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المعيدين والدكاترة</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+
+                {{-- الماليات --}}
+                <li class="nav-item {{currentRequest('payments') ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{currentRequest('payments') ? 'active' : ''}}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            الماليات
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" style="display: {{currentRequest('payments') ? 'block' : 'none'}};">
+                        <li class="nav-item">
+                            <a href="{{route('paymentstate.index')}}"
+                                class="nav-link {{currentRequest('payments/paymentstate') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>حالة الدفع</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('finance.index')}}"
+                                class="nav-link {{currentRequest('payments/finance') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الماليات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('studentfinance.index')}}"
+                                class="nav-link {{currentRequest('payments/studentfinance') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>ماليات الطالب</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('installment.index')}}"
+                                class="nav-link {{currentRequest('payments/installment') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>التقسيط</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+
+                {{-- الامتحانات --}}
+                <li class="nav-item {{currentRequest('exams') ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{currentRequest('exams') ? 'active' : ''}}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            الامتحانات
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" style="display: {{currentRequest('exams') ? 'block' : 'none'}};">
+                        <li class="nav-item">
+                            <a href="{{route('subject.index')}}"
+                                class="nav-link {{currentRequest('exams/subject') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المواد</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('committy.index')}}"
+                                class="nav-link {{currentRequest('exams/committy') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>اللجان</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('exam.index')}}"
+                                class="nav-link {{currentRequest('exams/exam') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الامتحانات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('exammarking.index')}}"
+                                class="nav-link {{currentRequest('exams/exammarking') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>تصحيح الامتحانات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('floor.index')}}"
+                                class="nav-link {{currentRequest('exams/floor') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الادوار</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('examobserver.index')}}"
+                                class="nav-link {{currentRequest('exams/examobserver') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>مراقبين الامتحانات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('sitnumber.index')}}"
+                                class="nav-link {{currentRequest('exams/sitnumber') ? 'active' : ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>ارقام الجلوس</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
             </ul>
+
+
         </nav>
         <!-- /.sidebar-menu -->
     </div>

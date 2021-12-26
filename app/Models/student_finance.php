@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class student_finance extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 }

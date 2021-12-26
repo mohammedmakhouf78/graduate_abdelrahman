@@ -17,7 +17,7 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('full_name');
             $table->date('birth_day');
-            $table->text('image');
+            $table->text('image')->nullable();
             $table->timestamps();
         });
     }
