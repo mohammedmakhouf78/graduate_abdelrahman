@@ -4,13 +4,13 @@ use Illuminate\Support\Facades\Request;
 
 if(!function_exists('form_text'))
 {
-    function form_text($name,$old = "")
+    function form_text($name,$old = "",$label)
     {
         echo <<<END
         <div class="card-body">
             <div class="form-group">
-                <label for="$name">$name</label>
-                <input type="text" class="form-control" id="$name" placeholder="$name" name="$name" value="$old">
+                <label for="$name">$label</label>
+                <input type="text" class="form-control" id="$name" placeholder="اكتب $label" name="$name" value="$old">
             </div>
         </div>
         END;

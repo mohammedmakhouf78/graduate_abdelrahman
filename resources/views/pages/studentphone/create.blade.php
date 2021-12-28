@@ -2,11 +2,13 @@
 
 @section('content')
 
+
+
 <div class="col-md-6">
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">تعديل الشعبة</h3>
+            <h3 class="card-title">اضافة رقم تلفون لمستخدم</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -15,23 +17,31 @@
         @endif
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{route($model.'.update',$obj->id)}}" method="POST">
+        <form action="{{route($model.'.store')}}" method="POST">
             @csrf
-            @method('PUT')
 
-
-            {!! form_text('department',$obj->department,"شعبة") !!}
-            @error('department')
+            {!! form_text('phone') !!}
+            @error('phone')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
+
+
+            {!! form_select('student_id') !!}
+            @error('student_id')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">تأكيد</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
             </div>
         </form>
     </div>
     <!-- /.card -->
 </div>
+
+
 
 @endsection

@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">المراكز</h3>
-            <a href="{{route('center.create')}}" class="btn btn-success">Create</a>
+            <a href="{{route('center.create')}}" class="btn btn-success">إنشاء</a>
             @if (session()->has('success'))
             <div class="alert alert-success" id="success">
                 {{session()->get('success')}}
@@ -19,9 +19,9 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>id</th>
-                        <th>center</th>
-                        <th>action</th>
+                        <th>الرقم التسلسلي</th>
+                        <th>المركز</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,9 +47,9 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>id</th>
-                        <th>center</th>
-                        <th>action</th>
+                        <th>الرقم التسلسلي</th>
+                        <th>المركز</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>
             </table>

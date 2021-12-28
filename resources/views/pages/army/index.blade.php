@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">المواقف من التجنيد</h3>
-            <a href="{{route('army.create')}}" class="btn btn-success">Create</a>
+            <a href="{{route('army.create')}}" class="btn btn-success">إنشاء</a>
             @if (session()->has('success'))
             <div class="alert alert-success" id="success">
                 {{session()->get('success')}}
@@ -19,9 +19,9 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>id</th>
-                        <th>army</th>
-                        <th>action</th>
+                        <th>الرقم التسلسلي</th>
+                        <th>موقف التجنيد</th>
+                        <th>تعديل وحذف</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,11 +46,9 @@
                     @endforeach
                 </tbody>
                 <tfoot>
-                    <tr>
-                        <th>id</th>
-                        <th>army</th>
-                        <th>action</th>
-                    </tr>
+                    <th>الرقم التسلسلي</th>
+                    <th>موقف التجنيد</th>
+                    <th>تعديل وحذف</th>
                 </tfoot>
             </table>
         </div>

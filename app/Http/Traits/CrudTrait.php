@@ -28,7 +28,7 @@ trait CrudTrait
     {
         $this->validation();
         $this->model::create($this->attReq());
-        return redirect()->back()->with('success', "{$this->modelName} was Created successfully");
+        return redirect()->back()->with('success','تمت العملية بنجاح');
     }
 
     public function edit($id)
@@ -45,7 +45,7 @@ trait CrudTrait
         $this->validation();
         $obj = $this->model::find($id);
         $obj->update($this->attReq());
-        return redirect()->back()->with('success', "{$this->modelName} was Updated successfully");
+        return redirect()->back()->with('success','تمت العملية بنجاح');
     }
 
     
@@ -54,7 +54,7 @@ trait CrudTrait
     {
         $obj = $this->model::find($id);
         $obj->delete();
-        return redirect()->back()->with('success', "{$this->modelName} was Deleted successfully");
+        return redirect()->back()->with('success','تمت العملية بنجاح');
     }
 
     private function uplodadImage($file,$fileName,$path,$old = null)

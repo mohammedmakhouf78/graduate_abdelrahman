@@ -42,9 +42,9 @@
                 {{-- students --}}
                 <li class="nav-item {{currentRequest('students') ? 'menu-open' : ''}}">
                     <a href="#" class="nav-link {{currentRequest('students') ? 'active' : ''}}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-user-graduate mr-3"></i>
                         <p>
-                            الطلبة
+                            الخصائص الشخصية
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -52,106 +52,106 @@
                         <li class="nav-item">
                             <a href="{{route('army.index')}}"
                                 class="nav-link {{currentRequest('students/army') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="far fa-flag ml-3 mr-3"></i>
                                 <p>موقف التجنيد</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('center.index')}}"
                                 class="nav-link {{currentRequest('students/center') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>المراكز</p>
+                                <i class="fas fa-city ml-3 mr-3"></i>
+                                <p>المركز</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('city.index')}}"
                                 class="nav-link {{currentRequest('students/city') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>المدن</p>
+                                <i class="fas fa-globe-europe ml-3 mr-3"></i>
+                                <p>المحافظة</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('decisiontype.index')}}"
                                 class="nav-link {{currentRequest('students/decisiontype') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>أنواع القرارات</p>
+                                <i class="fas fa-code-branch ml-3 mr-3"></i>
+                                <p>نوع قرار الطالب</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('department.index')}}"
                                 class="nav-link {{currentRequest('students/department') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>الأقسام</p>
+                                <i class="fas fa-ellipsis-v ml-3 mr-3"></i>
+                                <p>الشعبة</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('nationality.index')}}"
                                 class="nav-link {{currentRequest('students/nationality') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>الجنسيات</p>
+                                <i class="fas fa-dna ml-3 mr-3"></i>
+                                <p>الجنسية</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('notetype.index')}}"
                                 class="nav-link {{currentRequest('students/notetype') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>انواع الملاحظات</p>
+                                <i class="fas fa-code-branch ml-3 mr-3"></i>
+                                <p>نوع ملاحظة الطالب</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('organization.index')}}"
                                 class="nav-link {{currentRequest('students/organization') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>المنظمات</p>
+                                <i class="fas fa-school ml-3 mr-3"></i>
+                                <p>الجهة</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('qualification.index')}}"
                                 class="nav-link {{currentRequest('students/qualification') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>المؤهلات</p>
+                                <i class="fas fa-graduation-cap ml-3 mr-3"></i>
+                                <p>المؤهل</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('squad.index')}}"
                                 class="nav-link {{currentRequest('students/squad') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>الفرقة</p>
+                                <i class="fas fa-users ml-3 mr-3"></i>
+                                <p>الفرقة المقيد بها</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('status.index')}}"
                                 class="nav-link {{currentRequest('students/status') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>الحالات</p>
+                                <i class="fas fa-thermometer-three-quarters ml-3 mr-3"></i>
+                                <p>حالة الطالب</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('sutdent.index')}}"
                                 class="nav-link {{currentRequest('students/sutdent') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>الطلاب</p>
+                                <i class="fas fa-user-graduate ml-3 mr-3"></i>
+                                <p>الطالب</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('studentphone.index')}}"
                                 class="nav-link {{currentRequest('students/studentphone') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>تلفونات الطلاب</p>
+                                <i class="fas fa-phone ml-3 mr-3"></i>
+                                <p>هاتف الطالب</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('note.index')}}"
                                 class="nav-link {{currentRequest('students/note') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>الملاحظات</p>
+                                <i class="far fa-clipboard ml-3 mr-3"></i>
+                                <p>ملاحظات</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('decision.index')}}"
                                 class="nav-link {{currentRequest('students/decision') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>القرارات</p>
+                                <i class="fas fa-cash-register ml-3 mr-3"></i>
+                                <p>قرار متعلق بالطالب</p>
                             </a>
                         </li>
                     </ul>

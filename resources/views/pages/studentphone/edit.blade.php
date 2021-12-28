@@ -6,7 +6,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">تعديل الشعبة</h3>
+            <h3 class="card-title">تعديل رقم تلفون لمستخدم</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -20,14 +20,22 @@
             @method('PUT')
 
 
-            {!! form_text('department',$obj->department,"شعبة") !!}
-            @error('department')
+            {!! form_text('phone',$obj->phone) !!}
+            @error('phone')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
+
+
+            {!! form_select('student_id',$obj->student_id) !!}
+            @error('student_id')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">تأكيد</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
             </div>
         </form>
     </div>

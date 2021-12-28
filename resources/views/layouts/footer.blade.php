@@ -66,6 +66,7 @@
 </script>
 
 @yield('specificScript')
+
 </body>
 
 </html>

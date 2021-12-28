@@ -9,4 +9,14 @@ class Decision extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function type()
+    {
+        return $this->belongsTo(DecisionType::class,'type_id');
+    }
+
+    public function student()
+    {
+        return $this->belongsTo(Student::class,'student_id');
+    }
 }

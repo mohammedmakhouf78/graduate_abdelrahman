@@ -22,10 +22,7 @@ class StudentController extends Controller
     private function validation()
     {
         request()->validate([
-            'first_name' => 'required|string',
-            'second_name' => 'required|string',
-            'third_name' => 'required|string',
-            'last_name' => 'required|string',
+            'name' => 'required|string',
             'mother_name' => 'required|string',
             'gender' => 'required|boolean',
             'birth_date' => 'required|date',
@@ -67,12 +64,9 @@ class StudentController extends Controller
             'home_phone' => request('home_phone'),
             'coming_date' => request('coming_date'),
             'study_year' => request('study_year'),
-            'first_name' => request('first_name'),
+            'name' => request('name'),
             'gender' => request('gender'),
             'birth_date' => request('birth_date'),
-            'second_name' => request('second_name'),
-            'third_name' => request('third_name'),
-            'last_name' => request('last_name'),
             'mother_name' => request('mother_name'),
 
         ];
