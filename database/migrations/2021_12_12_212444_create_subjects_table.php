@@ -17,18 +17,12 @@ class CreateSubjectsTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('squad_id');
-            $table->unsignedBigInteger('department_id');
             $table->unsignedBigInteger('professor_id');
             $table->timestamps();
 
             $table->foreign('squad_id')
                 ->references('id')
                 ->on('squads')
-                ->onDelete('cascade');
-
-            $table->foreign('department_id')
-                ->references('id')
-                ->on('departments')
                 ->onDelete('cascade');
 
             $table->foreign('professor_id')

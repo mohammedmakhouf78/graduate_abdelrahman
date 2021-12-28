@@ -199,8 +199,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('professor_assistant.index')}}"
-                                class="nav-link {{currentRequest('employees/professor_assistant') ? 'active' : ''}}">
+                            <a href="{{route('professorassistant.index')}}"
+                                class="nav-link {{currentRequest('employees/professorassistant') ? 'active' : ''}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>المعيدين</p>
                             </a>

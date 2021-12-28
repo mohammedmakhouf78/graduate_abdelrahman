@@ -23,6 +23,7 @@ class SquadController extends Controller
     {
         request()->validate([
             'squad' => 'required|string',
+            'department_id' => 'nullable|int|exists:departments,id',
         ]);
     }
 
@@ -30,6 +31,7 @@ class SquadController extends Controller
     {
         return [
             'squad' => request('squad'),
+            'department_id' => request('department_id'),
         ];
     }
 }

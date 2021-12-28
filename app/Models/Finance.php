@@ -9,4 +9,9 @@ class Finance extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function squad()
+    {
+        return $this->belongsTo(Squad::class,'squad_id');
+    }
 }

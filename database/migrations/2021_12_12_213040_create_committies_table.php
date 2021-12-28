@@ -16,7 +16,7 @@ class CreateCommittiesTable extends Migration
         Schema::create('committies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('floor_id');
+            $table->unsignedBigInteger('floor_id')->nullable();
             $table->integer('start_from');
             $table->integer('end_to');
             $table->timestamps();

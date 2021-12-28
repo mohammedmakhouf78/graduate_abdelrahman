@@ -9,4 +9,9 @@ class Employee extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function professors()
+    {
+        return $this->hasMany(Professor::class,'employee_id');
+    }
 }

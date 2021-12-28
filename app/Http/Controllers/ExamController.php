@@ -22,6 +22,7 @@ class ExamController extends Controller
     private function validation()
     {
         request()->validate([
+            'name' => 'required|string',
             'exam_date' => 'required|date',
             'full_mark' => 'required|numeric',
             'subject_id' => 'required|int|exists:subjects,id',
@@ -35,6 +36,7 @@ class ExamController extends Controller
     public function attReq()
     {
         return [
+            'name' => request('name'),
             'exam_date' => request('exam_date'),
             'full_mark' => request('full_mark'),
             'subject_id' => request('subject_id'),

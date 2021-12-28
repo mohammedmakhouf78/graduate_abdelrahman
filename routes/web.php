@@ -76,7 +76,7 @@ Route::prefix('employees')->group(function () {
     Route::resource('employeephone',EmployeePhoneController::class);//
     Route::resource('observer',ObserverController::class);//
     Route::resource('professor',ProfessorController::class);//  
-    Route::resource('professor_assistant',ProfessorAssistantController::class);//
+    Route::resource('professorassistant',ProfessorAssistantController::class);//
     Route::resource('professorprofessorassistant',ProfessorProfessorAssistantController::class);//
 
 });

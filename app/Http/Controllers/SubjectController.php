@@ -24,7 +24,6 @@ class SubjectController extends Controller
         request()->validate([
             'name' => 'required|string',
             'squad_id' => 'required|int|exists:squads,id',
-            'department_id' => 'required|int|exists:departments,id',
             'professor_id' => 'required|int|exists:professors,id',
         ]);
     }
@@ -34,7 +33,6 @@ class SubjectController extends Controller
         return [
             'name' => request('name'),
             'squad_id' => request('squad_id'),
-            'department_id' => request('department_id'),
             'professor_id' => request('professor_id'),
         ];
     }

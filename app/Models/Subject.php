@@ -9,4 +9,14 @@ class Subject extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function squad()
+    {
+        return $this->belongsTo(Squad::class,'squad_id');
+    }
+
+    public function professor()
+    {
+        return $this->belongsTo(Professor::class,'professor_id');
+    }
 }
