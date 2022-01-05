@@ -20,7 +20,7 @@
         <form action="{{route($model.'.store')}}" method="POST">
             @csrf
 
-            {!! form_text('city',"","المحافظة") !!}
+            {!! form_text('city',"اسم المحافظة") !!}
             @error('city')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

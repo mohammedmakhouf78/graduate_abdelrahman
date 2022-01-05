@@ -20,14 +20,14 @@
             @method('PUT')
 
 
-            {!! form_text('type',$obj->type) !!}
+            {!! form_text('type',$obj->type,'نوع_الملاحظة') !!}
             @error('type')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

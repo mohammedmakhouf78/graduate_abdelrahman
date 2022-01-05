@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Request;
 
 if(!function_exists('form_text'))
 {
-    function form_text($name,$old = "",$label)
+    function form_text($name,$label = "",$old = "")
     {
+        $label = $label == "" ? $name : $label;
         echo <<<END
         <div class="card-body">
             <div class="form-group">
@@ -21,8 +22,9 @@ if(!function_exists('form_text'))
 
 if(!function_exists('form_select'))
 {
-    function form_select($name,$selected = 0,$field_name = "name")
+    function form_select($name,$label = "",$selected = 0,$field_name = "name")
     {
+        $label = $label == "" ? $name : $label;
         $x = explode('_',$name);
         $model = ucwords($x[0]);
         $class = "App\\Models\\$model";
@@ -30,7 +32,7 @@ if(!function_exists('form_select'))
         $result = <<<END
         <div class="card-body">
             <div class="form-group">
-                <label for="$name">$model</label>
+                <label for="$name">$label</label>
                 <select class="form-control" name="$name" id="$name">
         END;
 
@@ -60,14 +62,15 @@ if(!function_exists('form_select'))
 
 if(!function_exists('form_check'))
 {
-    function form_check($name,$checked = 0)
+    function form_check($name,$label="",$checked = 0)
     {
+        $label = $label == "" ? $name : $label;
         $checked = $checked == 0 ? '' : 'checked';
         echo <<<END
             <div class="card-body">
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="$name" name="$name" value="1" $checked>
-                    <label for="$name" class="form-check-label">$name</label>
+                    <label for="$name" class="form-check-label">$label</label>
                 </div>
             </div>
         END;
@@ -86,12 +89,13 @@ if(!function_exists('form_radio'))
 
 if(!function_exists('form_date'))
 {
-    function form_date($name,$date = '')
+    function form_date($name,$label = "",$date = '')
     {
+        $label = $label == "" ? $name : $label;
         echo <<<END
         <div class="card-body">
             <div class="form-group">
-                <label for="$name">$name</label>
+                <label for="$name">$label</label>
                 <input type="date" class="form-control" id="$name" placeholder="$name" name="$name" value="$date">
             </div>
         </div>
@@ -104,12 +108,13 @@ if(!function_exists('form_date'))
 
 if(!function_exists('form_file'))
 {
-    function form_file($name,$file = '')
+    function form_file($name,$label = "",$file = '')
     {
+        $label = $label == "" ? $name : $label;
         echo <<<END
         <div class="card-body">
             <div class="form-group">
-                <label for="$name">$name</label>
+                <label for="$name">$label</label>
                 <input type="file" class="form-control" id="$name" name="$name">
             </div>
         </div>

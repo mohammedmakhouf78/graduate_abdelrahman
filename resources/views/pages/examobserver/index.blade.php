@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">ارقام التلفونات</h3>
+            <h3 class="card-title">مراقبين الامتحانات</h3>
             <a href="{{route($model.'.create')}}" class="btn btn-success float-left">انشاء</a>
         </div>
         @if (session()->has('success'))
@@ -19,10 +19,10 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                        <th>الرقم التسلسلي</th>
+                        <th>اسم_مراقب_الامتحان</th>
+                        <th>اسم_المادة_الامتحان</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,8 +31,6 @@
                         <td>{{++$index}}</td>
                         <td>{{$item->observer->employee->full_name}}</td>
                         <td>{{$item->exam->name}}</td>
-                        <td>{{$item->created_at}}</td>
-                        <td>{{$item->updated_at}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
@@ -51,10 +49,10 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                        <th>الرقم التسلسلي</th>
+                        <th>اسم_مراقب_الامتحان</th>
+                        <th>اسم_المادة_الامتحان</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>
             </table>

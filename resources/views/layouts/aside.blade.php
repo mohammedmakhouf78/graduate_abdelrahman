@@ -181,7 +181,7 @@
                             <a href="{{route('employeephone.index')}}"
                                 class="nav-link {{currentRequest('employees/employeephone') ? 'active' : ''}}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>تلفونات الموظفين</p>
+                                <p>هواتف الموظفين</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -195,7 +195,7 @@
                             <a href="{{route('professor.index')}}"
                                 class="nav-link {{currentRequest('employees/professor') ? 'active' : ''}}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>الدكاترة</p>
+                                <p>الدكاتره</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -209,7 +209,7 @@
                             <a href="{{route('professorprofessorassistant.index')}}"
                                 class="nav-link {{currentRequest('employees/professorprofessorassistant') ? 'active' : ''}}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>المعيدين والدكاترة</p>
+                                <p> اعضاء هيئة التدريس</p>
                             </a>
                         </li>
                     </ul>
@@ -269,7 +269,7 @@
                     <a href="#" class="nav-link {{currentRequest('exams') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            الامتحانات
+                            النجاح والرسوب
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -306,7 +306,7 @@
                             <a href="{{route('floor.index')}}"
                                 class="nav-link {{currentRequest('exams/floor') ? 'active' : ''}}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>الادوار</p>
+                                <p>الطوابق</p>
                             </a>
                         </li>
                         <li class="nav-item">

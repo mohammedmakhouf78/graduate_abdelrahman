@@ -8,7 +8,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">اضافة لجنة</h3>
+            <h3 class="card-title">اضافة مراقب امتحان</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -22,7 +22,7 @@
 
             <div class="card-body">
                 <div class="form-group">
-                    <label for="observer_id">Observer</label>
+                    <label for="observer_id">اسم_مراقب_الامتحان</label>
                     <select class="form-control" name="observer_id" id="observer_id">
                         @foreach (\App\Models\Observer::with('employee')->get() as $item)
                         <option value="{{$item->id}}">{{$item->employee->full_name}}</option>
@@ -36,7 +36,7 @@
 
 
 
-            {!! form_select('exam_id') !!}
+            {!! form_select('exam_id','اسم_مادة_الامتحان') !!}
             @error('exam_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -45,7 +45,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

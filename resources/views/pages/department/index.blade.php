@@ -19,7 +19,7 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>الرقم التسلسلي</th>
+                        <th>الرقم_التسلسلي</th>
                         <th>الشعبة</th>
                         <th>حذف وتعديل</th>
                     </tr>
@@ -47,7 +47,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>الرقم التسلسلي</th>
+                        <th>الرقم_التسلسلي</th>
                         <th>الشعبة</th>
                         <th>حذف وتعديل</th>
                 </tfoot>

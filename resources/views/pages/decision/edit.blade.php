@@ -20,24 +20,24 @@
             @method('PUT')
 
 
-            {!! form_text('decision',$obj->decision) !!}
+            {!! form_text('decision','القرار',$obj->decision) !!}
             @error('decision')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_date('decision_date',$obj->decision_date) !!}
+            {!! form_date('decision_date','تاريخ_القرار',$obj->decision_date) !!}
             @error('decision_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('type_id',$obj->type_id,'type') !!}
+            {!! form_select('type_id','نوع_القرار',$obj->type_id,'type') !!}
             @error('type_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('student_id',$obj->student_id) !!}
+            {!! form_select('student_id','اسم_الطالب',$obj->student_id) !!}
             @error('student_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -46,7 +46,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

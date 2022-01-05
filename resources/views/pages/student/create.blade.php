@@ -8,7 +8,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">اضافة معيد</h3>
+            <h3 class="card-title">اضافة طالب</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -20,102 +20,102 @@
         <form action="{{route($model.'.store')}}" method="POST">
             @csrf
 
-            {!! form_text('name') !!}
+            {!! form_text('name','اسم_الطالب_رباعيا') !!}
             @error('name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
 
-            {!! form_text('mother_name') !!}
+            {!! form_text('mother_name','اسم_الام') !!}
             @error('mother_name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_check('gender') !!}
+            {!! form_check('gender','النوع') !!}
             @error('gender')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('birth_date') !!}
+            {!! form_date('birth_date','تاريخ_الميلاد') !!}
             @error('birth_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('study_year') !!}
+            {!! form_date('study_year','السنة_الدراسية') !!}
             @error('study_year')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('coming_date') !!}
+            {!! form_date('coming_date','تاريخ_القدوم') !!}
             @error('coming_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('home_phone') !!}
+            {!! form_text('home_phone','هاتف_المنزل') !!}
             @error('home_phone')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('identity_card') !!}
+            {!! form_text('identity_card','رقم_البطاقة') !!}
             @error('identity_card')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_file('image') !!}
+            {!! form_file('image','صورة') !!}
             @error('image')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('status_id',0,'status') !!}
+            {!! form_select('status_id','اسم_الطالب_رباعيا','status') !!}
             @error('status_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('nationality_id',0,'nationality') !!}
+            {!! form_select('nationality_id','الجنسية','nationality') !!}
             @error('nationality_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('city_id',0,'city') !!}
+            {!! form_select('city_id','المحافظة','city') !!}
             @error('city_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('center_id',0,'center') !!}
+            {!! form_select('center_id','المركز','center') !!}
             @error('center_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('qualification_id',0,'qualification') !!}
+            {!! form_select('qualification_id','المؤهل_الحاصل_عليه','qualification') !!}
             @error('qualification_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('army_id',0,'army') !!}
+            {!! form_select('army_id','موقف_من_التجنيد','army') !!}
             @error('army_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('squad_id',0,'squad') !!}
+            {!! form_select('squad_id','الفرقة','squad') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
-            {!! form_select('department_id',0,'department') !!}
+            {!! form_select('department_id','الشعبة','department') !!}
             @error('department_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -123,7 +123,7 @@
 
             <div class="card-body">
                 <div class="form-group">
-                    <label for="coming_from">Coming from</label>
+                    <label for="coming_from">الجهة_المحول_منها</label>
                     <select class="form-control" name="coming_from" id="coming_from">
                         @foreach (\App\Models\Organization::get() as $item)
                         <option value="{{$item->id}}">{{$item->organization}}</option>
@@ -138,7 +138,7 @@
 
             <div class="card-body">
                 <div class="form-group">
-                    <label for="going_to">Going to</label>
+                    <label for="going_to">الجهة_المحول_اليها</label>
                     <select class="form-control" name="going_to" id="going_to">
                         @foreach (\App\Models\Organization::get() as $item)
                         <option value="{{$item->id}}">{{$item->organization}}</option>
@@ -154,7 +154,7 @@
 
             <div class="card-body">
                 <div class="form-group">
-                    <label for="payment_state_id">Payment State</label>
+                    <label for="payment_state_id">حالة_الدفع</label>
                     <select class="form-control" name="payment_state_id" id="payment_state_id">
                         @foreach (\App\Models\PaymentState::get() as $item)
                         <option value="{{$item->id}}">{{$item->state}}</option>
@@ -169,7 +169,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

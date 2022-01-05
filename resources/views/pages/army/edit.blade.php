@@ -6,7 +6,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">إضافة بيان</h3>
+            <h3 class="card-title">تعديل موقف من التجنيد</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -20,7 +20,7 @@
             @method('PUT')
             <div class="card-body">
                 <div class="form-group">
-                    <label for="army">تعديل موقف من التجنيد</label>
+                    <label for="army">موقف من التجنيد</label>
                     <input type="text" class="form-control" id="army" placeholder="اكتب هنا" name="army"
                         value="{{$army->army}}">
                 </div>

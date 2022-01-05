@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">ارقام التلفونات</h3>
+            <h3 class="card-title">ماليات الطالب</h3>
             <a href="{{route($model.'.create')}}" class="btn btn-success float-left">انشاء</a>
         </div>
         @if (session()->has('success'))
@@ -19,10 +19,15 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>المبلغ_المدفوع</th>
+                        <th>المبلغ_المستحق</th>
+                        <th>مبالغ_من_سنوات_سابقة</th>
+                        <th>مبلغ_القسط</th>
+                        <th>اسم_الطالب_رباعيا</th>
+                        <th>تاريخ_الدفع</th>
+                        <th>رقم_قسيمة_الدفع</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,7 +41,6 @@
                         <td>{{$item->student->name}}</td>
                         <td>{{$item->paid_date}}</td>
                         <td>{{$item->paid_id_number}}</td>
-                        <td>{{$item->updated_at}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
@@ -55,10 +59,15 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>المبلغ_المدفوع</th>
+                        <th>المبلغ_المستحق</th>
+                        <th>مبالغ_من_سنوات_سابقة</th>
+                        <th>إجمالي_المصروفات_السنوية</th>
+                        <th>اسم_الطالب_رباعيا</th>
+                        <th>تاريخ_الدفع</th>
+                        <th>رقم_قسيمة_الدفع</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>
             </table>

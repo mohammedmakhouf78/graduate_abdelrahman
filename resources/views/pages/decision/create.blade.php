@@ -21,24 +21,24 @@
             @csrf
 
 
-            {!! form_text('decision') !!}
+            {!! form_text('decision','القرار') !!}
             @error('decision')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_date('decision_date') !!}
+            {!! form_date('decision_date','تاريخ_القرار') !!}
             @error('decision_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('type_id',0,'type') !!}
+            {!! form_select('type_id','نوع_القرار','type') !!}
             @error('type_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('student_id') !!}
+            {!! form_select('student_id','اسم_الطالب') !!}
             @error('student_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -47,7 +47,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

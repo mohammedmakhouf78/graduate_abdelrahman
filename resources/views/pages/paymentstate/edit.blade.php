@@ -20,14 +20,14 @@
             @method('PUT')
 
 
-            {!! form_text('state',$obj->state) !!}
+            {!! form_text('state',$obj->state,'حالة_الدفع') !!}
             @error('state')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>
