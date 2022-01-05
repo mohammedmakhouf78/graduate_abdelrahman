@@ -50,12 +50,12 @@ class Student extends Model
         return $this->belongsTo(Department::class,'department_id');
     }
 
-    public function coming_from()
+    public function comingfrom()
     {
         return $this->belongsTo(Organization::class,'coming_from');
     }
 
-    public function going_to()
+    public function goingto()
     {
         return $this->belongsTo(Organization::class,'going_to');
     }

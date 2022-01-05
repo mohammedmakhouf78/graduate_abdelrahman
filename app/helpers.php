@@ -69,8 +69,8 @@ if(!function_exists('form_check'))
         echo <<<END
             <div class="card-body">
                 <div class="form-group form-check">
+                    <label for="$name" class="form-check-label ml-3">$label</label>
                     <input type="checkbox" class="form-check-input" id="$name" name="$name" value="1" $checked>
-                    <label for="$name" class="form-check-label">$label</label>
                 </div>
             </div>
         END;

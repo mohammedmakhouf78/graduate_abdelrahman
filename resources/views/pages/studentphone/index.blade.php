@@ -20,7 +20,7 @@
                 <thead>
                     <tr>
 
-                       <th>الرقم_التسلسلي</th>
+                        <th>الرقم_التسلسلي</th>
                         <th>رقم_المحمول</th>
                         <th>اسم_الطالب_رباعيا</th>
                         <th>حذف وتعديل</th>
@@ -33,7 +33,7 @@
                         <td>{{++$index}}</td>
                         <td>{{$item->phone}}</td>
                         <td>{{$item->student->name}}</td>
-                        <td class="text-right">
+                        <td class="d-flex justify-content-end">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
                             </a>
@@ -51,12 +51,12 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                       
+
                         <th>الرقم_التسلسلي</th>
                         <th>رقم_المحمول</th>
                         <th>اسم_الطالب_رباعيا</th>
                         <th>حذف وتعديل</th>
-                        
+
                     </tr>
                 </tfoot>
             </table>

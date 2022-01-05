@@ -20,7 +20,7 @@
             @method('PUT')
 
 
-            {!! form_text('type',$obj->type,'نوع_الملاحظة') !!}
+            {!! form_text('type','نوع_الملاحظة',$obj->type) !!}
             @error('type')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

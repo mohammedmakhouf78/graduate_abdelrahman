@@ -17,7 +17,7 @@
         @endif
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{route($model.'.store')}}" method="POST">
+        <form action="{{route($model.'.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
 
             {!! form_text('name','اسم_الطالب_رباعيا') !!}
@@ -33,7 +33,7 @@
             @enderror
 
 
-            {!! form_check('gender','النوع') !!}
+            {!! form_check('gender','مذكر') !!}
             @error('gender')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -75,47 +75,47 @@
             @enderror
 
 
-            {!! form_select('status_id','اسم_الطالب_رباعيا','status') !!}
+            {!! form_select('status_id','حالة الطالب',0,'status') !!}
             @error('status_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('nationality_id','الجنسية','nationality') !!}
+            {!! form_select('nationality_id','الجنسية',0,'nationality') !!}
             @error('nationality_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('city_id','المحافظة','city') !!}
+            {!! form_select('city_id','المحافظة',0,'city') !!}
             @error('city_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('center_id','المركز','center') !!}
+            {!! form_select('center_id','المركز',0,'center') !!}
             @error('center_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('qualification_id','المؤهل_الحاصل_عليه','qualification') !!}
+            {!! form_select('qualification_id','المؤهل_الحاصل_عليه',0,'qualification') !!}
             @error('qualification_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('army_id','موقف_من_التجنيد','army') !!}
+            {!! form_select('army_id','موقف_من_التجنيد',0,'army') !!}
             @error('army_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('squad_id','الفرقة','squad') !!}
+            {!! form_select('squad_id','الفرقة',0,'squad') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
-            {!! form_select('department_id','الشعبة','department') !!}
+            {!! form_select('department_id','الشعبة',0,'department') !!}
             @error('department_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

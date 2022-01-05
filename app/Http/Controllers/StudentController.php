@@ -19,12 +19,51 @@ class StudentController extends Controller
         $this->modelName = strtolower(class_basename($model));
     }
 
+    public function store(Request $request)
+    {
+        $this->validation();
+        $fileName = time() . "_student.jpeg";
+
+        $this->uplodadImage($request->image,$fileName,'students');
+
+        $this->model::create(array_merge(
+            $this->attReq(),
+            ['image' => $fileName]
+        ));
+        return redirect()->back()->with('success', "تمت العملية بنجاح");
+    }
+
+
+    public function update(Request $request,$id)
+    {
+        $this->validation();
+        $obj = $this->model::find($id);
+
+        $fileName = time() . "_student.jpeg";
+
+        $this->uplodadImage($request->image,$fileName,'students',$obj->image);
+
+        $obj->update(array_merge(
+            $this->attReq(),
+            ['image' => $fileName]
+        ));
+        return redirect()->back()->with('success', "تمت العملية بنجاح");
+    }
+
+    public function destroy($id)
+    {
+        $obj = $this->model::find($id);
+        unlink(public_path('images/students/' . $obj->image));
+        $obj->delete();
+        return redirect()->back()->with('success', "تمت العملية بنجاح");
+    }
+
     private function validation()
     {
         request()->validate([
             'name' => 'required|string',
             'mother_name' => 'required|string',
-            'gender' => 'required|boolean',
+            'gender' => 'boolean',
             'birth_date' => 'required|date',
             'study_year' => 'required|date',
             'coming_date' => 'required|date',
@@ -65,7 +104,7 @@ class StudentController extends Controller
             'coming_date' => request('coming_date'),
             'study_year' => request('study_year'),
             'name' => request('name'),
-            'gender' => request('gender'),
+            'gender' => request('gender',0),
             'birth_date' => request('birth_date'),
             'mother_name' => request('mother_name'),
 

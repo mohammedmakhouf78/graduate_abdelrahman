@@ -20,7 +20,7 @@
             @method('PUT')
 
 
-            {!! form_text('status',$obj->status,'حالة_الطالب') !!}
+            {!! form_text('status','حالة_الطالب',$obj->status) !!}
             @error('status')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

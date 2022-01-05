@@ -19,7 +19,7 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        
+
                         <th>الرقم_التسلسلي</th>
                         <th>الفرقة</th>
                         <th>الشعبة</th>
@@ -32,7 +32,7 @@
                         <td>{{++$index}}</td>
                         <td>{{$item->squad}}</td>
                         <td>{{$item->department->department}}</td>
-                        <td class="text-right">
+                        <td class="d-flex justify-content-end">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
                             </a>
@@ -51,11 +51,11 @@
                 <tfoot>
                     <tr>
 
-                       <th>الرقم_التسلسلي</th>
+                        <th>الرقم_التسلسلي</th>
                         <th>الفرقة</th>
                         <th>الشعبة</th>
                         <th>حذف وتعديل</th>
-                        
+
                     </tr>
                 </tfoot>
             </table>

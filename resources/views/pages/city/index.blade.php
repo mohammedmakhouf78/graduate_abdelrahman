@@ -29,7 +29,7 @@
                     <tr>
                         <td>{{++$index}}</td>
                         <td>{{$item->city}}</td>
-                        <td class="text-right">
+                        <td class="d-flex justify-content-end">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
                             </a>

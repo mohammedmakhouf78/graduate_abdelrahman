@@ -63,7 +63,7 @@ Route::prefix('students')->group(function () {
     Route::resource('qualification',QualificationController::class);//
     Route::resource('squad',SquadController::class);//
     Route::resource('status',StatusController::class);//
-    Route::resource('sutdent',StudentController::class);//
+    Route::resource('student',StudentController::class);//
     Route::resource('studentphone',StudentPhoneController::class);//
     Route::resource('note',NoteController::class);//
     Route::resource('decision',DecisionController::class);//

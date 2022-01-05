@@ -49,13 +49,16 @@
                         <td>{{++$index}}</td>
                         <td>{{$item->name}}</td>
                         <td>{{$item->mother_name}}</td>
-                        <td>{{$item->gender}}</td>
+                        <td>{{$item->gender == 1 ? "مذكر" : "مؤنث"}}</td>
                         <td>{{$item->birth_date}}</td>
                         <td>{{$item->study_year}}</td>
                         <td>{{$item->coming_date}}</td>
                         <td>{{$item->home_phone}}</td>
                         <td>{{$item->identity_card}}</td>
-                        <td>{{$item->image}}</td>
+                        <td>
+                            <img style="width: 100px ; height:100px;object-fit:cover"
+                                src="{{asset('images/students/' .$item->image)}}" alt="">
+                        </td>
                         <td>{{$item->status->status}}</td>
                         <td>{{$item->nationality->nationality}}</td>
                         <td>{{$item->city->city}}</td>
@@ -64,11 +67,11 @@
                         <td>{{$item->army->army}}</td>
                         <td>{{$item->squad->squad}}</td>
                         <td>{{$item->department->department}}</td>
-                        <td>{{$item->coming_from->organization}}</td>
-                        <td>{{$item->going_to->organization}}</td>
+                        <td>{{$item->comingfrom->organization}}</td>
+                        <td>{{$item->goingto->organization}}</td>
                         <td>{{$item->paymentState->state}}</td>
                         <td class="text-right">
-                            <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
+                            <a class="btn btn-primary mb-3" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
                             </a>
                             <form method="POST" action="{{route($model.'.destroy',$item->id)}}">
@@ -125,7 +128,8 @@
 <script>
     $(function () {
       $("#example1").DataTable({
-        "responsive": true, "lengthChange": true, "autoWidth": false,
+        "responsive": false, "lengthChange": false, "autoWidth": false,
+        "scrollX": true,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({

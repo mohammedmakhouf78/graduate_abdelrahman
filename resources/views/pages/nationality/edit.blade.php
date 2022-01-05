@@ -20,7 +20,7 @@
             @method('PUT')
 
 
-            {!! form_text('nationality',$obj->nationality,'الجنسسية') !!}
+            {!! form_text('nationality','الجنسسية',$obj->nationality) !!}
             @error('nationality')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

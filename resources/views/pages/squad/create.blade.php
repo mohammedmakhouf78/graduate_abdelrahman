@@ -26,7 +26,7 @@
             @enderror
 
 
-            {!! form_select('department_id','الشعبة',"department") !!}
+            {!! form_select('department_id','الشعبة',0,"department") !!}
             @error('squad')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

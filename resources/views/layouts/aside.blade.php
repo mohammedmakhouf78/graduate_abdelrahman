@@ -127,8 +127,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('sutdent.index')}}"
-                                class="nav-link {{currentRequest('students/sutdent') ? 'active' : ''}}">
+                            <a href="{{route('student.index')}}"
+                                class="nav-link {{currentRequest('students/student') ? 'active' : ''}}">
                                 <i class="fas fa-user-graduate ml-3 mr-3"></i>
                                 <p>الطالب</p>
                             </a>

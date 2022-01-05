@@ -31,7 +31,7 @@ class EmployeeController extends Controller
             $this->attReq(),
             ['image' => $fileName]
         ));
-        return redirect()->back()->with('success', "{$this->modelName} was Created successfully");
+        return redirect()->back()->with('success', "تمت العملية بنجاح");
     }
 
 
@@ -48,7 +48,7 @@ class EmployeeController extends Controller
             $this->attReq(),
             ['image' => $fileName]
         ));
-        return redirect()->back()->with('success', "{$this->modelName} was Updated successfully");
+        return redirect()->back()->with('success', "تمت العملية بنجاح");
     }
 
     public function destroy($id)
@@ -56,7 +56,7 @@ class EmployeeController extends Controller
         $obj = $this->model::find($id);
         unlink(public_path('images/employees/' . $obj->image));
         $obj->delete();
-        return redirect()->back()->with('success', "{$this->modelName} was Deleted successfully");
+        return redirect()->back()->with('success', "تمت العملية بنجاح");
     }
 
     private function validation()

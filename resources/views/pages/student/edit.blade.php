@@ -15,108 +15,108 @@
         @endif
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{route($model.'.update',$obj->id)}}" method="POST">
+        <form action="{{route($model.'.update',$obj->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
 
 
-            {!! form_text('name',$obj->name,'اسم_الطالب_رباعيا') !!}
+            {!! form_text('name','اسم_الطالب_رباعيا',$obj->name) !!}
             @error('name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
 
-            {!! form_text('mother_name',$obj->mother_name,'اسم_الام') !!}
+            {!! form_text('mother_name','اسم_الام',$obj->mother_name) !!}
             @error('mother_name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_check('gender',$obj->gender,'النوع') !!}
+            {!! form_check('gender','مذكر',$obj->gender) !!}
             @error('gender')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('birth_date',$obj->birth_date,'تاريخ_الميلاد') !!}
+            {!! form_date('birth_date','تاريخ_الميلاد',$obj->birth_date) !!}
             @error('birth_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('study_year',$obj->study_year,'السنة_الدراسية') !!}
+            {!! form_date('study_year','السنة_الدراسية',$obj->study_year) !!}
             @error('study_year')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('coming_date',$obj->coming_date,'تاريخ_القدوم') !!}
+            {!! form_date('coming_date','تاريخ_القدوم',$obj->coming_date) !!}
             @error('coming_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('home_phone',$obj->home_phone,'هاتف_المنزل') !!}
+            {!! form_text('home_phone','هاتف_المنزل',$obj->home_phone) !!}
             @error('home_phone')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('identity_card',$obj->identity_card,'رقم_البطاقة') !!}
+            {!! form_text('identity_card','رقم_البطاقة',$obj->identity_card) !!}
             @error('identity_card')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_file('image','صوره') !!}
+            {!! form_file('image','صورة') !!}
             @error('image')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('status_id',$obj->status_id,'status','حالة_الطالب') !!}
+            {!! form_select('status_id','حالة الطالب',$obj->status_id,'status') !!}
             @error('status_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('nationality_id',$obj->nationality_id,'nationality','الجنسية') !!}
+            {!! form_select('nationality_id','الجنسية',$obj->nationality_id,'nationality') !!}
             @error('nationality_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('city_id',$obj->city_id,'city','المحافظة') !!}
+            {!! form_select('city_id','المحافظة',$obj->city_id,'city') !!}
             @error('city_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('center_id',$obj->center_id,'center','المركز') !!}
+            {!! form_select('center_id','المركز',$obj->center_id,'center') !!}
             @error('center_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('qualification_id',$obj->qualification_id,'qualification','المؤهل_الحاصل_عليه') !!}
+            {!! form_select('qualification_id','المؤهل_الحاصل_عليه',$obj->qualification_id,'qualification') !!}
             @error('qualification_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('army_id',$obj->army_id,'army','موقف_من_التجنيد') !!}
+            {!! form_select('army_id','موقف_من_التجنيد',$obj->army_id,'army') !!}
             @error('army_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('squad_id',$obj->squad_id,'squad','الفرقة') !!}
+            {!! form_select('squad_id','الفرقة',$obj->squad_id,'squad') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
-            {!! form_select('department_id',$obj->department_id,'department','الشعبة') !!}
+            {!! form_select('department_id','الشعبة',$obj->department_id,'department') !!}
             @error('department_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

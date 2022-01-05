@@ -20,13 +20,13 @@
             @method('PUT')
 
 
-            {!! form_text('phone',$obj->phone,'رقم_المحمول') !!}
+            {!! form_text('phone','رقم_المحمول',$obj->phone) !!}
             @error('phone')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('student_id',$obj->student_id,'اسم_الطالب_رباعيا') !!}
+            {!! form_select('student_id','اسم_الطالب_رباعيا',$obj->student_id) !!}
             @error('student_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
