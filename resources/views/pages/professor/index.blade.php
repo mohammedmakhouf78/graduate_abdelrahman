@@ -19,10 +19,10 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                       
+                        <th>الرقم_التسلسلي</th>
+                        <th>اسم_الدكتور_رباعيا</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,8 +30,6 @@
                     <tr>
                         <td>{{++$index}}</td>
                         <td>{{$item->employee->full_name}}</td>
-                        <td>{{$item->created_at}}</td>
-                        <td>{{$item->updated_at}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
@@ -50,10 +48,9 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>اسم_الدكتور_رباعيا</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>
             </table>

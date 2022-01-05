@@ -19,10 +19,28 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>اسم_الطالب_رباعيا</th>
+                        <th>اسم_الام</th>
+                        <th>النوع</th>
+                        <th>تاريخ_الميلاد</th>
+                        <th>السنة_الدراسية</th>
+                        <th>تاريخ_القدوم</th>
+                        <th>هاتف_المنزل</th>
+                        <th>رقم_البطاقة</th>
+                        <th>صورة</th>
+                        <th>حالة_الطالب</th>
+                        <th>الجنسية</th>
+                        <th>المحافظة</th>
+                        <th>المركز</th>
+                        <th>المؤهل_الحاصل_عليه</th>
+                        <th>موقف_من_التجنيد</th>
+                        <th>الفرقة</th>
+                        <th>الشعبة</th>
+                        <th>الجهة_المحول_منها</th>
+                        <th>الجهة_المحول_اليها</th>
+                        <th>حالة_الدفع</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,8 +67,6 @@
                         <td>{{$item->coming_from->organization}}</td>
                         <td>{{$item->going_to->organization}}</td>
                         <td>{{$item->paymentState->state}}</td>
-                        <td>{{$item->created_at}}</td>
-                        <td>{{$item->updated_at}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
@@ -69,10 +85,28 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>اسم_الطالب_رباعيا</th>
+                        <th>اسم_الام</th>
+                        <th>النوع</th>
+                        <th>تاريخ_الميلاد</th>
+                        <th>السنة_الدراسية</th>
+                        <th>تاريخ_القدوم</th>
+                        <th>هاتف_المنزل</th>
+                        <th>رقم_البطاقة</th>
+                        <th>صورة</th>
+                        <th>حالة_الطالب</th>
+                        <th>الجنسية</th>
+                        <th>المحافظة</th>
+                        <th>المركز</th>
+                        <th>المؤهل_الحاصل_عليه</th>
+                        <th>موقف_من_التجنيد</th>
+                        <th>الفرقة</th>
+                        <th>الشعبة</th>
+                        <th>الجهةالمحول_منها</th>
+                        <th>الجهة_المحول_اليها</th>
+                        <th>حالة_الدفع</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>
             </table>

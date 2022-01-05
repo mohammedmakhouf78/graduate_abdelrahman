@@ -8,7 +8,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">إضافة بيان</h3>
+            <h3 class="card-title">إضافة مركز</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">

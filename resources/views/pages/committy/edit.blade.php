@@ -20,24 +20,24 @@
             @method('PUT')
 
 
-            {!! form_text('name',$obj->name) !!}
+            {!! form_text('name','اسم_الطالب',$obj->name) !!}
             @error('name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('floor_id',$obj->floor_id,'floor') !!}
+            {!! form_select('floor_id','رقم_الطابق',$obj->floor_id,'floor') !!}
             @error('floor_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_text('start_from',$obj->start_from) !!}
+            {!! form_text('start_from','يبدأ_من',$obj->start_from) !!}
             @error('start_from')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('end_to',$obj->end_to) !!}
+            {!! form_text('end_to','ينتهي_الي',$obj->end_to) !!}
             @error('end_to')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -46,7 +46,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

@@ -6,7 +6,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">تعديل لجنة</h3>
+            <h3 class="card-title">تعديل الاختبار</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -19,37 +19,37 @@
             @csrf
             @method('PUT')
 
-            {!! form_text('name',$obj->name) !!}
+            {!! form_text('name',$obj->name,'اسم_الطالب') !!}
             @error('name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('exam_date',$obj->exam_date) !!}
+            {!! form_date('exam_date',$obj->exam_date,'تاريخ_الاختبار') !!}
             @error('exam_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_text('full_mark',$obj->full_mark) !!}
+            {!! form_text('full_mark',$obj->full_mark,'الدرجة') !!}
             @error('full_mark')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('subject_id',$obj->subject_id) !!}
+            {!! form_select('subject_id',$obj->subject_id,'اسم_المادة') !!}
             @error('subject_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('department_id',$obj->department_id,'department') !!}
+            {!! form_select('department_id',$obj->department_id,'department','الشعبة') !!}
             @error('department_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
 
-            {!! form_select('squad_id',$obj->squad_id,'squad') !!}
+            {!! form_select('squad_id',$obj->squad_id,'squad','الفرقة') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -65,7 +65,7 @@
                         @endforeach
                     </select>
                 </div>
-                @error('professor_id')
+                @error('professor_id','دكتور_المادة')
                 <p class="text-danger" id="myError">{{$message}}</p>
                 @enderror
             </div>
@@ -80,7 +80,7 @@
                         @endforeach
                     </select>
                 </div>
-                @error('professor_assistant_id')
+                @error('professor_assistant_id','معيد_المادة')
                 <p class="text-danger" id="myError">{{$message}}</p>
                 @enderror
             </div>
@@ -89,7 +89,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

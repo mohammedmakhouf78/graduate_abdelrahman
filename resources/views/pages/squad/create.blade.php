@@ -20,13 +20,13 @@
         <form action="{{route($model.'.store')}}" method="POST">
             @csrf
 
-            {!! form_text('squad') !!}
+            {!! form_text('squad','الفرقة') !!}
             @error('squad')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('department_id',0,"department") !!}
+            {!! form_select('department_id','الشعبة',"department") !!}
             @error('squad')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -34,7 +34,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

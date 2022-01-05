@@ -20,24 +20,24 @@
         <form action="{{route($model.'.store')}}" method="POST">
             @csrf
 
-            {!! form_text('name') !!}
+            {!! form_text('name','اسم_الطالب') !!}
             @error('name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('floor_id',0,'floor') !!}
+            {!! form_select('floor_id','رقم_الطابق',0,'floor') !!}
             @error('floor_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_text('start_from') !!}
+            {!! form_text('start_from','يبدأ_من') !!}
             @error('start_from')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('end_to') !!}
+            {!! form_text('end_to','ينتهي_الي') !!}
             @error('end_to')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -46,7 +46,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

@@ -6,7 +6,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">تعديل فرقة</h3>
+            <h3 class="card-title">تعديل الفرقة</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -20,20 +20,20 @@
             @method('PUT')
 
 
-            {!! form_text('squad',$obj->squad) !!}
+            {!! form_text('squad',$obj->squad,'الفرقة') !!}
             @error('squad')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('department_id',$obj->department_id,"department") !!}
+            {!! form_select('department_id',$obj->department_id,"department",'الشعبة') !!}
             @error('department_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

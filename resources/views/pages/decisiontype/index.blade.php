@@ -19,8 +19,8 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>الرقم التسلسلي</th>
-                        <th>نوع القرار</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>نوع_القرار</th>
                         <th>حذف وتعديل</th>
                     </tr>
                 </thead>
@@ -47,8 +47,8 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>الرقم التسلسلي</th>
-                        <th>نوع القرار</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>نوع_القرار</th>
                         <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>

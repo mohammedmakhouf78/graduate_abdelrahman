@@ -8,7 +8,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">اضافة رقم تلفون لمستخدم</h3>
+            <h3 class="card-title">اضافه ملاحظة</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -21,24 +21,24 @@
             @csrf
 
 
-            {!! form_text('note') !!}
+            {!! form_text('note','ملاحظة') !!}
             @error('note')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_date('note_date') !!}
+            {!! form_date('note_date','تاريخ_الملاحظة') !!}
             @error('note_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('type_id',0,'type') !!}
+            {!! form_select('type_id',0,'type','نوع_الملاحظة') !!}
             @error('type_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('student_id') !!}
+            {!! form_select('student_id','اسم_الطالب_رابعيا') !!}
             @error('student_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -47,7 +47,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

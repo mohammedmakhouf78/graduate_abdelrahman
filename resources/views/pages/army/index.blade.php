@@ -19,8 +19,8 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>الرقم التسلسلي</th>
-                        <th>موقف التجنيد</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>موقف_من_التجنيد</th>
                         <th>تعديل وحذف</th>
                     </tr>
                 </thead>
@@ -46,9 +46,9 @@
                     @endforeach
                 </tbody>
                 <tfoot>
-                    <th>الرقم التسلسلي</th>
-                    <th>موقف التجنيد</th>
-                    <th>تعديل وحذف</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>موقف_من_التجنيد</th>
+                        <th>تعديل وحذف</th>
                 </tfoot>
             </table>
         </div>

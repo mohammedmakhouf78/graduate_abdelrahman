@@ -18,11 +18,14 @@
         <div class="card-body">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                    <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                    <tr> 
+                        <th>الرقم_التسلسلي</th>
+                        <th>اجمالي_المصروفات_السنوية</th>
+                        <th>مصروفات_ثابتة</th>
+                        <th>مصروفات_متغيرة</th>
+                        <th>الخصم</th>
+                        <th>المبلغ_المستحق</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,8 +37,6 @@
                         <td>{{$item->changable_money}}</td>
                         <td>{{$item->discount}}</td>
                         <td>{{$item->deserved_money}}</td>
-                        <td>{{$item->squad->squad}}</td>
-                        <td>{{$item->updated_at}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
@@ -54,10 +55,13 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                        <th>الرقم_التسلسلي</th>
+                        <th>اجمالي_المصروفات_السنوية</th>
+                        <th>مصروفات_ثابتة</th>
+                        <th>مصروفات_متغيرة</th>
+                        <th>الخصم</th>
+                        <th>المبلغ_المستحق</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>
             </table>

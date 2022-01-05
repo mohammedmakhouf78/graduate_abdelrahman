@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">ارقام التلفونات</h3>
+            <h3 class="card-title">ارقام الجلوس</h3>
             <a href="{{route($model.'.create')}}" class="btn btn-success float-left">انشاء</a>
         </div>
         @if (session()->has('success'))
@@ -18,11 +18,12 @@
         <div class="card-body">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                    <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                    <tr> 
+                        <th>الرقم_التسلسلي</th>
+                        <th>اسم_الطالب_رباعيا</th>
+                        <th>الفرقة_المقيد_بها</th>
+                        <th>رقم_جلوس_الطالب</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,8 +33,6 @@
                         <td>{{$item->student->name}}</td>
                         <td>{{$item->squad->squad}}</td>
                         <td>{{$item->sit_number}}</td>
-                        <td>{{$item->created_at}}</td>
-                        <td>{{$item->updated_at}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
@@ -51,11 +50,12 @@
                     @endforeach
                 </tbody>
                 <tfoot>
-                    <tr>
-                        @foreach ($columns as $column)
-                        <th>{{$column}}</th>
-                        @endforeach
-                        <th>Action</th>
+                    <tr> 
+                        <th>الرقم_التسلسلي</th>
+                        <th>اسم_الطالب_رباعيا</th>
+                        <th>الفرقة_المقيد_بها</th>
+                        <th>رقم_جلوس_الطالب</th>
+                        <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>
             </table>

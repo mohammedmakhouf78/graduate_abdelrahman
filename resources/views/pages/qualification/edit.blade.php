@@ -20,14 +20,14 @@
             @method('PUT')
 
 
-            {!! form_text('qualification',$obj->qualification) !!}
+            {!! form_text('qualification','المؤهل_الدراسي',$obj->qualification) !!}
             @error('qualification')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

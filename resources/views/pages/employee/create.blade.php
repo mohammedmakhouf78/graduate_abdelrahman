@@ -21,19 +21,19 @@
             @csrf
 
 
-            {!! form_text('full_name') !!}
+            {!! form_text('full_name','اسم_الموظف_رباعيا') !!}
             @error('full_name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('birth_day') !!}
+            {!! form_date('birth_day','تاريخ_الميلاد') !!}
             @error('birth_day')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_file('image') !!}
+            {!! form_file('image','صوره') !!}
             @error('image')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -42,7 +42,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary swalDefaultSuccess">Submit</button>
+                <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>
             </div>
         </form>
     </div>

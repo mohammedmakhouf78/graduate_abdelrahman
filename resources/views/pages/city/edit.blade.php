@@ -6,7 +6,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">تعديل محافظة</h3>
+            <h3 class="card-title">تعديل المحافظة</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -20,7 +20,7 @@
             @method('PUT')
 
 
-            {!! form_text('city',$obj->city,"محافظة") !!}
+            {!! form_text('city',"اسم المحافظة",$obj->city) !!}
             @error('city')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
