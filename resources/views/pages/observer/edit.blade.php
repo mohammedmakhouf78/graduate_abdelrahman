@@ -20,7 +20,7 @@
             @method('PUT')
 
 
-            {!! form_select('employee_id',0,"full_name",$obj->employee_id,'اسم_المراقب_رباعيا') !!}
+            {!! form_select('employee_id','اسم_المراقب_رباعيا',0,"full_name",$obj->employee_id) !!}
             @error('employee_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

@@ -163,7 +163,7 @@
                 {{-- الموظفين --}}
                 <li class="nav-item {{currentRequest('employees') ? 'menu-open' : ''}}">
                     <a href="#" class="nav-link {{currentRequest('employees') ? 'active' : ''}}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-user-tie mr-3"></i>
                         <p>
                             الموظفين
                             <i class="right fas fa-angle-left"></i>
@@ -173,42 +173,42 @@
                         <li class="nav-item">
                             <a href="{{route('employee.index')}}"
                                 class="nav-link {{currentRequest('employees/employee') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-users-cog ml-3 mr-3"></i>
                                 <p>الموظفين</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('employeephone.index')}}"
                                 class="nav-link {{currentRequest('employees/employeephone') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-phone ml-3 mr-3"></i>
                                 <p>هواتف الموظفين</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('observer.index')}}"
                                 class="nav-link {{currentRequest('employees/observer') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-eye ml-3 mr-3"></i>
                                 <p>المراقبين</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('professor.index')}}"
                                 class="nav-link {{currentRequest('employees/professor') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>الدكاتره</p>
+                                <i class="fas fa-user-tie ml-3 mr-3"></i>
+                                <p>الدكتور</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('professorassistant.index')}}"
                                 class="nav-link {{currentRequest('employees/professorassistant') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>المعيدين</p>
+                                <i class="fas fa-chalkboard-teacher ml-3 mr-3"></i>
+                                <p>المعيد</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('professorprofessorassistant.index')}}"
-                                class="nav-link {{currentRequest('employees/professorprofessorassistant') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{route('professor_professorassistant.index')}}"
+                                class="nav-link {{currentRequest('employees/professor_professorassistant') ? 'active' : ''}}">
+                                <i class="fas fa-users ml-3 mr-3"></i>
                                 <p> اعضاء هيئة التدريس</p>
                             </a>
                         </li>

@@ -26,7 +26,7 @@
             @enderror
 
 
-            {!! form_select('employee_id','اسم_الموظف_رباعيا',"full_name") !!}
+            {!! form_select('employee_id','اسم_الموظف_رباعيا',0,"full_name") !!}
             @error('employee_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

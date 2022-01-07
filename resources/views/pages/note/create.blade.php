@@ -21,7 +21,7 @@
             @csrf
 
 
-            {!! form_text('note','ملاحظة') !!}
+            {!! form_textarea('note','ملاحظة') !!}
             @error('note')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -32,11 +32,19 @@
             @enderror
 
 
-            {!! form_select('type_id',0,'type','نوع_الملاحظة') !!}
-            @error('type_id')
-            <p class="text-danger" id="myError">{{$message}}</p>
-            @enderror
-
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="type_id">النوع</label>
+                    <select class="form-control" name="type_id" id="type_id">
+                        @foreach (\App\Models\NoteType::get() as $item)
+                        <option value="{{$item->id}}">{{$item->type}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                @error('type_id')
+                <p class="text-danger" id="myError">{{$message}}</p>
+                @enderror
+            </div>
 
             {!! form_select('student_id','اسم_الطالب_رابعيا') !!}
             @error('student_id')

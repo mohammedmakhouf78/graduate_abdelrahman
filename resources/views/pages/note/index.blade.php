@@ -37,7 +37,7 @@
                         <td>{{$item->note_date}}</td>
                         <td>{{$item->type->type}}</td>
                         <td>{{$item->student->name}}</td>
-                        <td class="text-right">
+                        <td class="d-flex justify-content-end">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
                             </a>

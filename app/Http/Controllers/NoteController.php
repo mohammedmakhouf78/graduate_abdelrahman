@@ -24,7 +24,7 @@ class NoteController extends Controller
         request()->validate([
             'note' => 'required|string',
             'note_date' => 'required|date',
-            'type_id' => 'required|int|exists:types,id',
+            'type_id' => 'required|int|exists:note_types,id',
             'student_id' => 'required|int|exists:students,id',
         ]);
     }

@@ -18,6 +18,22 @@ if(!function_exists('form_text'))
     }
 }
 
+if(!function_exists('form_textarea'))
+{
+    function form_textarea($name,$label ="",$old = "")
+    {
+        $label = $label == "" ? $name : $label;
+        echo <<<END
+        <div class="card-body">
+            <div class="form-group">
+                <label for="$name">$label</label>
+                <textarea type="text" class="form-control" id="$name" placeholder="اكتب $label" name="$name">$old</textarea>
+            </div>
+        </div>
+        END;
+    }
+}
+
 
 
 if(!function_exists('form_select'))

@@ -20,19 +20,19 @@
             @method('PUT')
 
 
-            {!! form_text('full_name',$obj->full_name,'اسم_الموظف_رباعيا') !!}
+            {!! form_text('full_name','اسم_الموظف_رباعيا',$obj->full_name) !!}
             @error('full_name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('birth_day',$obj->birth_day,'تاريخ_الميلاد') !!}
+            {!! form_date('birth_day','تاريخ_الميلاد',$obj->birth_day) !!}
             @error('birth_day')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_file('image',$obj->image,'صوره') !!}
+            {!! form_file('image','صوره',$obj->image) !!}
             @error('image')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

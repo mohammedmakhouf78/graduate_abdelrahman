@@ -24,7 +24,7 @@ class DecisionController extends Controller
         request()->validate([
             'decision' => 'required|string',
             'decision_date' => 'required|date',
-            'type_id' => 'required|int|exists:types,id',
+            'type_id' => 'required|int|exists:decision_types,id',
             'student_id' => 'required|int|exists:students,id',
         ]);
     }

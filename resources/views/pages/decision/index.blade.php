@@ -37,7 +37,7 @@
                         <td>{{$item->decision_date}}</td>
                         <td>{{$item->type->type}}</td>
                         <td>{{$item->student->name}}</td>
-                        <td class="text-right">
+                        <td class="d-flex justify-content-end">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
                             </a>
@@ -62,7 +62,7 @@
                         <th>نوع_القرار</th>
                         <th>اسم_الطالب</th>
                         <th>حذف وتعديل</th>
-                        
+
                     </tr>
                 </tfoot>
             </table>
