@@ -59,17 +59,17 @@
                             <img style="width: 100px ; height:100px;object-fit:cover"
                                 src="{{asset('images/students/' .$item->image)}}" alt="">
                         </td>
-                        <td>{{$item->status->status}}</td>
-                        <td>{{$item->nationality->nationality}}</td>
-                        <td>{{$item->city->city}}</td>
-                        <td>{{$item->center->center}}</td>
-                        <td>{{$item->qualification->qualification}}</td>
-                        <td>{{$item->army->army}}</td>
-                        <td>{{$item->squad->squad}}</td>
-                        <td>{{$item->department->department}}</td>
-                        <td>{{$item->comingfrom->organization}}</td>
-                        <td>{{$item->goingto->organization}}</td>
-                        <td>{{$item->paymentState->state}}</td>
+                        <td>{{$item->status->status ?? ""}}</td>
+                        <td>{{$item->nationality->nationality ?? ""}}</td>
+                        <td>{{$item->city->city ?? ""}}</td>
+                        <td>{{$item->center->center ?? ""}}</td>
+                        <td>{{$item->qualification->qualification ?? ""}}</td>
+                        <td>{{$item->army->army ?? ""}}</td>
+                        <td>{{$item->squad->squad ?? ""}}</td>
+                        <td>{{$item->department->department ?? ""}}</td>
+                        <td>{{$item->comingfrom->organization ?? ""}}</td>
+                        <td>{{$item->goingto->organization ?? ""}}</td>
+                        <td>{{$item->paymentState->state ?? ""}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary mb-3" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
