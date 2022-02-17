@@ -38,6 +38,12 @@
             @enderror
 
 
+            {!! form_select('student_id','اسم الطالب') !!}
+            @error('student_id')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
             <!-- /.card-body -->
 
             <div class="card-footer text-right">

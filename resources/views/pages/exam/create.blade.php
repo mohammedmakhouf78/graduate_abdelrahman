@@ -20,7 +20,7 @@
         <form action="{{route($model.'.store')}}" method="POST">
             @csrf
 
-            {!! form_text('name','اسم_الطالب') !!}
+            {!! form_text('name','اسم الإمتحان') !!}
             @error('name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -43,14 +43,14 @@
             @enderror
 
 
-            {!! form_select('department_id','الشعبة','department') !!}
+            {!! form_select('department_id','الشعبة',0,'department') !!}
             @error('department_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
 
-            {!! form_select('squad_id','الفرقة','squad') !!}
+            {!! form_select('squad_id','الفرقة',0,'squad') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

@@ -20,19 +20,19 @@
             @method('PUT')
 
 
-            {!! form_select('student_id',$obj->student_id,'اسم_الطالب_رباعيا') !!}
+            {!! form_select('student_id','اسم_الطالب_رباعيا',$obj->student_id) !!}
             @error('student_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('squad_id',$obj->squad_id,'squad','الفرقة_المقيد_بها') !!}
+            {!! form_select('squad_id','الفرقة_المقيد_بها',$obj->squad_id,'squad') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('sit_number',$obj->sit_number,'رقم_جلوس_الطالب') !!}
+            {!! form_text('sit_number','رقم_جلوس_الطالب',$obj->sit_number) !!}
             @error('sit_number')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

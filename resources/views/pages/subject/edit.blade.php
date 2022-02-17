@@ -26,7 +26,7 @@
             @enderror
 
 
-            {!! form_select('squad_id',$obj->squad_id,"squad",'الفرقة') !!}
+            {!! form_select('squad_id','الفرقة',$obj->squad_id,"squad") !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

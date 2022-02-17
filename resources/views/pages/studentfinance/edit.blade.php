@@ -39,25 +39,25 @@
 
 
 
-            {!! form_select('finance_id','اجمالي_المصروفات_السنوية','total') !!}
+            {!! form_select('finance_id','اجمالي_المصروفات_السنوية',0,'total') !!}
             @error('finance_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('student_id',$obj->student_id,'اسم_الطالب_رباعيا') !!}
+            {!! form_select('student_id','اسم_الطالب_رباعيا',$obj->student_id) !!}
             @error('student_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('paid_date',$obj->paid_date,'تاريخ_الدفع') !!}
+            {!! form_text('paid_date','تاريخ_الدفع',$obj->paid_date) !!}
             @error('paid_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('paid_id_number',$obj->paid_id_number,'رقم_قسيمة_الدفع') !!}
+            {!! form_text('paid_id_number','رقم_قسيمة_الدفع',$obj->paid_id_number) !!}
             @error('paid_id_number')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

@@ -20,7 +20,7 @@
             @method('PUT')
 
 
-            {!! form_text('floor',$obj->floor,'رقم_الطابق') !!}
+            {!! form_text('floor','رقم_الطابق',$obj->floor) !!}
             @error('floor')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

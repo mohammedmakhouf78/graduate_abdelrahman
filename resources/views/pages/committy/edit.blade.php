@@ -31,13 +31,13 @@
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_text('start_from','يبدأ_من',$obj->start_from) !!}
+            {!! form_date('start_from','يبدأ_من',$obj->start_from) !!}
             @error('start_from')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('end_to','ينتهي_الي',$obj->end_to) !!}
+            {!! form_date('end_to','ينتهي_الي',$obj->end_to) !!}
             @error('end_to')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

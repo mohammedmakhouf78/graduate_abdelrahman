@@ -19,37 +19,37 @@
             @csrf
             @method('PUT')
 
-            {!! form_text('name',$obj->name,'اسم_الطالب') !!}
+            {!! form_text('name','اسم الإختبار',$obj->name) !!}
             @error('name')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_date('exam_date',$obj->exam_date,'تاريخ_الاختبار') !!}
+            {!! form_date('exam_date','تاريخ_الاختبار',$obj->exam_date) !!}
             @error('exam_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_text('full_mark',$obj->full_mark,'الدرجة') !!}
+            {!! form_text('full_mark','الدرجة',$obj->full_mark) !!}
             @error('full_mark')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('subject_id',$obj->subject_id,'اسم_المادة') !!}
+            {!! form_select('subject_id','اسم_المادة',$obj->subject_id) !!}
             @error('subject_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('department_id',$obj->department_id,'department','الشعبة') !!}
+            {!! form_select('department_id','الشعبة',$obj->department_id,'department') !!}
             @error('department_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
 
-            {!! form_select('squad_id',$obj->squad_id,'squad','الفرقة') !!}
+            {!! form_select('squad_id','الفرقة',$obj->squad_id,'squad') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

@@ -37,7 +37,7 @@
                     <label for="student_finance_id">ماليات_الطالب</label>
                     <select class="form-control" name="student_finance_id" id="student_finance_id">
                         @foreach (\App\Models\StudentFinance::get() as $item)
-                        <option value="{{$item->id}}">{{$item}}</option>
+                        <option value="{{$item->id}}">{{$item->paid}}</option>
                         @endforeach
                     </select>
                 </div>

@@ -18,11 +18,17 @@ class CreateExamMarkingsTable extends Migration
             $table->float('degree');
             $table->date('marking_date');
             $table->unsignedBigInteger('exam_id')->nullable();
+            $table->unsignedBigInteger('student_id')->nullable();
             $table->timestamps();
 
             $table->foreign('exam_id')
             ->references('id')
             ->on('exams')
+            ->onDelete('set null');
+
+            $table->foreign('student_id')
+            ->references('id')
+            ->on('students')
             ->onDelete('set null');
         });
     }

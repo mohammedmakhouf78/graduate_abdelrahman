@@ -8,7 +8,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">اضافة رقم جلوس  </h3>
+            <h3 class="card-title">اضافة رقم جلوس </h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -28,7 +28,7 @@
             @enderror
 
 
-            {!! form_select('squad_id','الفرقة_المقيد_بها','squad') !!}
+            {!! form_select('squad_id','الفرقة_المقيد_بها',0,'squad') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

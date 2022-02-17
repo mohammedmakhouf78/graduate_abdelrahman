@@ -222,7 +222,7 @@
                 {{-- الماليات --}}
                 <li class="nav-item {{currentRequest('payments') ? 'menu-open' : ''}}">
                     <a href="#" class="nav-link {{currentRequest('payments') ? 'active' : ''}}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-coins mr-3"></i>
                         <p>
                             الماليات
                             <i class="right fas fa-angle-left"></i>
@@ -232,28 +232,28 @@
                         <li class="nav-item">
                             <a href="{{route('paymentstate.index')}}"
                                 class="nav-link {{currentRequest('payments/paymentstate') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-money-check-alt ml-3 mr-3"></i>
                                 <p>حالة الدفع</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('finance.index')}}"
                                 class="nav-link {{currentRequest('payments/finance') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-wallet ml-3 mr-3"></i>
                                 <p>الماليات</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('studentfinance.index')}}"
                                 class="nav-link {{currentRequest('payments/studentfinance') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-graduation-cap ml-3 mr-3"></i>
                                 <p>ماليات الطالب</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('installment.index')}}"
                                 class="nav-link {{currentRequest('payments/installment') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-money-check-alt ml-3 mr-3"></i>
                                 <p>التقسيط</p>
                             </a>
                         </li>
@@ -267,59 +267,59 @@
                 {{-- الامتحانات --}}
                 <li class="nav-item {{currentRequest('exams') ? 'menu-open' : ''}}">
                     <a href="#" class="nav-link {{currentRequest('exams') ? 'active' : ''}}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-spell-check mr-3"></i>
                         <p>
                             النجاح والرسوب
-                            <i class="right fas fa-angle-left"></i>
+                            <i class="right fas fa-angle-left "></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview" style="display: {{currentRequest('exams') ? 'block' : 'none'}};">
                         <li class="nav-item">
                             <a href="{{route('subject.index')}}"
                                 class="nav-link {{currentRequest('exams/subject') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-book ml-3 mr-3"></i>
                                 <p>المواد</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('committy.index')}}"
                                 class="nav-link {{currentRequest('exams/committy') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-school ml-3 mr-3"></i>
                                 <p>اللجان</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('exam.index')}}"
                                 class="nav-link {{currentRequest('exams/exam') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-book-open ml-3 mr-3"></i>
                                 <p>الامتحانات</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('exammarking.index')}}"
                                 class="nav-link {{currentRequest('exams/exammarking') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-check-double ml-3 mr-3"></i>
                                 <p>تصحيح الامتحانات</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('floor.index')}}"
                                 class="nav-link {{currentRequest('exams/floor') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-layer-group ml-3 mr-3"></i>
                                 <p>الطوابق</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('examobserver.index')}}"
                                 class="nav-link {{currentRequest('exams/examobserver') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fab fa-watchman-monitoring ml-3 mr-3"></i>
                                 <p>مراقبين الامتحانات</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('sitnumber.index')}}"
                                 class="nav-link {{currentRequest('exams/sitnumber') ? 'active' : ''}}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-list-ol ml-3 mr-3"></i>
                                 <p>ارقام الجلوس</p>
                             </a>
                         </li>

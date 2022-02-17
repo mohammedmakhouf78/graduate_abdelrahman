@@ -39,7 +39,7 @@
 
 
 
-            {!! form_select('finance_id',0,'total','اجمالي_المصروفات_السنوية') !!}
+            {!! form_select('finance_id','اجمالي_المصروفات_السنوية',0,'total') !!}
             @error('finance_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
@@ -51,7 +51,7 @@
             @enderror
 
 
-            {!! form_text('paid_date','تاريخ_الدفع') !!}
+            {!! form_date('paid_date','تاريخ_الدفع') !!}
             @error('paid_date')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

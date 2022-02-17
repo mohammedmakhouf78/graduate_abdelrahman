@@ -25,6 +25,7 @@ class ExamMarkingController extends Controller
             'degree' => 'required|numeric',
             'marking_date' => 'required|date',
             'exam_id' => 'required|int|exists:exams,id',
+            'student_id' => 'required|int|exists:students,id',
         ]);
     }
 
@@ -34,6 +35,7 @@ class ExamMarkingController extends Controller
             'degree' => request('degree'),
             'marking_date' => request('marking_date'),
             'exam_id' => request('exam_id'),
+            'student_id' => request('student_id'),
         ];
     }
 }

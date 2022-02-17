@@ -20,36 +20,36 @@
             @method('PUT')
 
 
-            {!! form_text('total',$obj->total,'اجمالي_المصروفات_السنوية') !!}
+            {!! form_text('total','اجمالي_المصروفات_السنوية',$obj->total) !!}
             @error('total')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('fixed_money',$obj->fixed_money,'مصروفات_ثابتة') !!}
+            {!! form_text('fixed_money','مصروفات_ثابتة',$obj->fixed_money) !!}
             @error('fixed_money')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('changable_money',$obj->changable_money,'مصروفات_متغيرة') !!}
+            {!! form_text('changable_money','مصروفات_متغيرة',$obj->changable_money) !!}
             @error('changable_money')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_text('discount',$obj->discount,'الخصم') !!}
+            {!! form_text('discount','الخصم',$obj->discount) !!}
             @error('discount')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_text('deserved_money',$obj->deserved_money,'المبلغ_المستحق') !!}
+            {!! form_text('deserved_money','المبلغ_المستحق',$obj->deserved_money) !!}
             @error('deserved_money')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
 
-            {!! form_select('squad_id',$obj->squad_id,'الفرقة','squad') !!}
+            {!! form_select('squad_id','الفرقة',$obj->squad_id,'squad') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

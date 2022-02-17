@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Traits\CrudTrait;
-use App\Models\student_finance;
+use App\Models\StudentFinance;
 
 class StudentFinanceController extends Controller
 {
@@ -13,7 +13,7 @@ class StudentFinanceController extends Controller
     public $modelName;
 
 
-    public function __construct(student_finance $model)
+    public function __construct(StudentFinance $model)
     {
         $this->model = $model;
         $this->modelName = strtolower(class_basename($model));

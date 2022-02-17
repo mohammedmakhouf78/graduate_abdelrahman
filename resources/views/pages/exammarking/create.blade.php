@@ -33,8 +33,14 @@
             @enderror
 
 
-            {!! form_select('exam_id','اسم_الطالب') !!}
+            {!! form_select('exam_id','اسم الإمتحان') !!}
             @error('exam_id')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
+            {!! form_select('student_id','اسم الطالب') !!}
+            @error('student_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
