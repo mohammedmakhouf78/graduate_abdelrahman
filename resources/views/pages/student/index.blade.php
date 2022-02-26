@@ -22,6 +22,10 @@
                         <th>الرقم_التسلسلي</th>
                         <th>اسم_الطالب_رباعيا</th>
                         <th>اسم_الام</th>
+                        <th>رقم القيد</th>
+                        <th>وظيفة الأب</th>
+                        <th>وظيفة الأم</th>
+                        <th>الديانة</th>
                         <th>النوع</th>
                         <th>تاريخ_الميلاد</th>
                         <th>السنة_الدراسية</th>
@@ -49,6 +53,10 @@
                         <td>{{++$index}}</td>
                         <td>{{$item->name}}</td>
                         <td>{{$item->mother_name}}</td>
+                        <td>{{$item->hold_number}}</td>
+                        <td>{{$item->father_job}}</td>
+                        <td>{{$item->mother_job}}</td>
+                        <td>{{$item->religion}}</td>
                         <td>{{$item->gender == 1 ? "مذكر" : "مؤنث"}}</td>
                         <td>{{$item->birth_date}}</td>
                         <td>{{$item->study_year}}</td>
@@ -91,6 +99,10 @@
                         <th>الرقم_التسلسلي</th>
                         <th>اسم_الطالب_رباعيا</th>
                         <th>اسم_الام</th>
+                        <th>رقم القيد</th>
+                        <th>وظيفة الأب</th>
+                        <th>وظيفة الأم</th>
+                        <th>الديانة</th>
                         <th>النوع</th>
                         <th>تاريخ_الميلاد</th>
                         <th>السنة_الدراسية</th>

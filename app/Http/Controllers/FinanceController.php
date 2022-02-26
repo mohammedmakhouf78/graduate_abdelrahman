@@ -28,6 +28,7 @@ class FinanceController extends Controller
             'discount' => 'required|numeric',
             'deserved_money' => 'required|numeric',
             'squad_id' => 'required|int|exists:squads,id',
+            'employee_id' => 'required|int|exists:employees,id',
         ]);
     }
 
@@ -40,6 +41,7 @@ class FinanceController extends Controller
             'discount' => request('discount'),
             'deserved_money' => request('deserved_money'),
             'squad_id' => request('squad_id'),
+            'employee_id' => request('employee_id'),
         ];
     }
 }

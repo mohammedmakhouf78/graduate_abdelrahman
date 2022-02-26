@@ -12,6 +12,11 @@ class Finance extends Model
 
     public function squad()
     {
-        return $this->belongsTo(Squad::class,'squad_id');
+        return $this->belongsTo(Squad::class, 'squad_id');
+    }
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class, 'employee_id');
     }
 }

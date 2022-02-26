@@ -12,56 +12,61 @@ class Student extends Model
 
     public function status()
     {
-        return $this->belongsTo(Status::class,'status_id');
+        return $this->belongsTo(Status::class, 'status_id');
     }
 
     public function nationality()
     {
-        return $this->belongsTo(Nationality::class,'nationality_id');
+        return $this->belongsTo(Nationality::class, 'nationality_id');
     }
 
     public function city()
     {
-        return $this->belongsTo(City::class,'city_id');
+        return $this->belongsTo(City::class, 'city_id');
     }
 
     public function center()
     {
-        return $this->belongsTo(Center::class,'center_id');
+        return $this->belongsTo(Center::class, 'center_id');
     }
 
     public function qualification()
     {
-        return $this->belongsTo(Qualification::class,'qualification_id');
+        return $this->belongsTo(Qualification::class, 'qualification_id');
     }
 
     public function army()
     {
-        return $this->belongsTo(Army::class,'army_id');
+        return $this->belongsTo(Army::class, 'army_id');
     }
 
     public function squad()
     {
-        return $this->belongsTo(Squad::class,'squad_id');
+        return $this->belongsTo(Squad::class, 'squad_id');
     }
 
     public function department()
     {
-        return $this->belongsTo(Department::class,'department_id');
+        return $this->belongsTo(Department::class, 'department_id');
     }
 
     public function comingfrom()
     {
-        return $this->belongsTo(Organization::class,'coming_from');
+        return $this->belongsTo(Organization::class, 'coming_from');
     }
 
     public function goingto()
     {
-        return $this->belongsTo(Organization::class,'going_to');
+        return $this->belongsTo(Organization::class, 'going_to');
     }
 
     public function paymentState()
     {
-        return $this->belongsTo(PaymentState::class,'payment_state_id');
+        return $this->belongsTo(PaymentState::class, 'payment_state_id');
+    }
+
+    public function failers()
+    {
+        return $this->hasMany(Failer::class, 'student_id');
     }
 }

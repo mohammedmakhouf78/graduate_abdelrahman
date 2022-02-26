@@ -33,6 +33,30 @@
             @enderror
 
 
+            {!! form_text('hold_number','رقم القيد') !!}
+            @error('hold_number')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
+            {!! form_text('father_job','وظيفة الأب') !!}
+            @error('father_job')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
+            {!! form_text('mother_job','وظيفة الأم') !!}
+            @error('father_job')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
+            {!! form_text('religion','الديانة') !!}
+            @error('religion')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
             {!! form_check('gender','مذكر') !!}
             @error('gender')
             <p class="text-danger" id="myError">{{$message}}</p>

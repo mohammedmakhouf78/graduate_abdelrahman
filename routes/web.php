@@ -13,6 +13,7 @@ use App\Http\Controllers\EmployeePhoneController;
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\ExamMarkingController;
 use App\Http\Controllers\ExamObserverController;
+use App\Http\Controllers\FailerController;
 use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\FloorController;
 use App\Http\Controllers\InstallmentController;
@@ -50,63 +51,64 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('admin/loginPage',[AuthController::class,'loginPage'])->name('admin.loginPage');
-Route::post('admin/login',[AuthController::class , 'login'])->name('admin.login');
-Route::get('admin/logout',[AuthController::class , 'logout'])->name('admin.logout');
+Route::get('admin/loginPage', [AuthController::class, 'loginPage'])->name('admin.loginPage');
+Route::post('admin/login', [AuthController::class, 'login'])->name('admin.login');
+Route::get('admin/logout', [AuthController::class, 'logout'])->name('admin.logout');
 
-Route::group(['middleware' => 'auth'],function(){
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/', function () {
         return view('pages.home.index');
     })->name('home');
-    
-    Route::prefix('students')->group(function () {
-        Route::resource('army',ArmyController::class);
-        Route::resource('center',CenterController::class);
-        Route::resource('city',CityController::class);
-        Route::resource('decisiontype',DecisionTypeController::class);
-        Route::resource('department',DepartmentController::class);
-        Route::resource('nationality',NationalityController::class);//
-        Route::resource('notetype',NoteTypeController::class);//
-        Route::resource('organization',OrganizationController::class);//
-        Route::resource('qualification',QualificationController::class);//
-        Route::resource('squad',SquadController::class);//
-        Route::resource('status',StatusController::class);//
-        Route::resource('student',StudentController::class);//
-        Route::resource('studentphone',StudentPhoneController::class);//
-        Route::resource('note',NoteController::class);//
-        Route::resource('decision',DecisionController::class);//
-    
-        
-    });
-    
-    Route::prefix('employees')->group(function () {
-        Route::resource('employee',EmployeeController::class);
-        Route::resource('employeephone',EmployeePhoneController::class);//
-        Route::resource('observer',ObserverController::class);//
-        Route::resource('professor',ProfessorController::class);//  
-        Route::resource('professorassistant',ProfessorAssistantController::class);//
-        Route::resource('professor_professorassistant',ProfessorProfessorAssistantController::class);//
-    
-    });
-    
-    Route::prefix('payments')->group(function () {
-        Route::resource('paymentstate',PaymentStateController::class); //
-        Route::resource('finance',FinanceController::class); //
-        Route::resource('studentfinance',StudentFinanceController::class); //
-        Route::resource('installment',InstallmentController::class); //
-    });
-    
-    Route::prefix('exams')->group(function () {
-        Route::resource('subject',SubjectController::class);//
-        Route::resource('committy',CommittyController::class);//
-        Route::resource('exam',ExamController::class);//
-        Route::resource('exammarking',ExamMarkingController::class);//
-        Route::resource('floor',FloorController::class);//
-        Route::resource('examobserver',ExamObserverController::class);//
-        Route::resource('sitnumber',SitnumberController::class);//
-           
-    });
-    
-    Route::resource('userphone',UserPhoneController::class); //
-});
 
+    Route::prefix('students')->group(function () {
+        Route::resource('army', ArmyController::class);
+        Route::resource('center', CenterController::class);
+        Route::resource('city', CityController::class);
+        Route::resource('decisiontype', DecisionTypeController::class);
+        Route::resource('department', DepartmentController::class);
+        Route::resource('nationality', NationalityController::class); //
+        Route::resource('notetype', NoteTypeController::class); //
+        Route::resource('organization', OrganizationController::class); //
+        Route::resource('qualification', QualificationController::class); //
+        Route::resource('squad', SquadController::class); //
+        Route::resource('status', StatusController::class); //
+        Route::resource('student', StudentController::class); //
+        Route::resource('studentphone', StudentPhoneController::class); //
+        Route::resource('note', NoteController::class); //
+        Route::resource('decision', DecisionController::class); //
+
+
+    });
+
+    Route::prefix('employees')->group(function () {
+        Route::resource('employee', EmployeeController::class);
+        Route::resource('employeephone', EmployeePhoneController::class); //
+        Route::resource('observer', ObserverController::class); //
+        Route::resource('professor', ProfessorController::class); //  
+        Route::resource('professorassistant', ProfessorAssistantController::class); //
+        Route::resource('professor_professorassistant', ProfessorProfessorAssistantController::class); //
+
+    });
+
+    Route::prefix('payments')->group(function () {
+        Route::resource('paymentstate', PaymentStateController::class); //
+        Route::resource('finance', FinanceController::class); //
+        Route::resource('studentfinance', StudentFinanceController::class); //
+        Route::resource('installment', InstallmentController::class); //
+    });
+
+    Route::prefix('exams')->group(function () {
+        Route::resource('subject', SubjectController::class); //
+        Route::resource('committy', CommittyController::class); //
+        Route::resource('exam', ExamController::class); //
+        Route::resource('exammarking', ExamMarkingController::class); //
+        Route::resource('floor', FloorController::class); //
+        Route::resource('examobserver', ExamObserverController::class); //
+        Route::resource('sitnumber', SitnumberController::class); //
+        Route::get('/failer_subject', [FailerController::class, 'failer_subject'])->name('failer_subject');
+        Route::resource('failer', FailerController::class); //
+
+    });
+
+    Route::resource('userphone', UserPhoneController::class); //
+});

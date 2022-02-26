@@ -303,6 +303,20 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{route('failer.index')}}"
+                                class="nav-link {{currentRequest('exams/failer') ? 'active' : ''}}">
+                                <i class="fas fa-check-double ml-3 mr-3"></i>
+                                <p>مواد وسنين التخلف</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('failer_subject')}}"
+                                class="nav-link {{currentRequest('exams/failer_subject') ? 'active' : ''}}">
+                                <i class="fas fa-check-double ml-3 mr-3"></i>
+                                <p>مواد التخلف</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{route('floor.index')}}"
                                 class="nav-link {{currentRequest('exams/floor') ? 'active' : ''}}">
                                 <i class="fas fa-layer-group ml-3 mr-3"></i>

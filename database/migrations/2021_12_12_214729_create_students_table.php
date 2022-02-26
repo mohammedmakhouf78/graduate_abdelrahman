@@ -16,14 +16,18 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('hold_number');
+            $table->string('father_job');
+            $table->string('mother_job');
+            $table->string('religion');
             $table->string('mother_name');
             $table->boolean('gender');
             $table->date('birth_date');
             $table->date('study_year');
             $table->date('coming_date');
-            $table->string('home_phone');
+            $table->string('home_phone')->nullable();
             $table->string('identity_card');
-            $table->text('image');
+            $table->text('image')->nullable();
             $table->unsignedBigInteger('status_id')->nullable();
             $table->unsignedBigInteger('nationality_id')->nullable();
             $table->unsignedBigInteger('city_id')->nullable();
@@ -38,61 +42,60 @@ class CreateStudentsTable extends Migration
             $table->timestamps();
 
             $table->foreign('status_id')
-            ->references('id')
-            ->on('statuses')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('statuses')
+                ->onDelete('set null');
 
             $table->foreign('nationality_id')
-            ->references('id')
-            ->on('nationalities')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('nationalities')
+                ->onDelete('set null');
 
             $table->foreign('city_id')
-            ->references('id')
-            ->on('cities')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('cities')
+                ->onDelete('set null');
 
             $table->foreign('center_id')
-            ->references('id')
-            ->on('centers')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('centers')
+                ->onDelete('set null');
 
             $table->foreign('qualification_id')
-            ->references('id')
-            ->on('qualifications')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('qualifications')
+                ->onDelete('set null');
 
             $table->foreign('army_id')
-            ->references('id')
-            ->on('armies')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('armies')
+                ->onDelete('set null');
 
 
             $table->foreign('squad_id')
-            ->references('id')
-            ->on('squads')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('squads')
+                ->onDelete('set null');
 
             $table->foreign('department_id')
-            ->references('id')
-            ->on('departments')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('departments')
+                ->onDelete('set null');
 
             $table->foreign('coming_from')
-            ->references('id')
-            ->on('organizations')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('organizations')
+                ->onDelete('set null');
 
             $table->foreign('going_to')
-            ->references('id')
-            ->on('organizations')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('organizations')
+                ->onDelete('set null');
 
             $table->foreign('payment_state_id')
-            ->references('id')
-            ->on('payment_states')
-            ->onDelete('set null');
-
+                ->references('id')
+                ->on('payment_states')
+                ->onDelete('set null');
         });
     }
 

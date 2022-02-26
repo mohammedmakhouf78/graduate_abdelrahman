@@ -26,30 +26,29 @@ class CreateExamsTable extends Migration
             $table->timestamps();
 
             $table->foreign('subject_id')
-            ->references('id')
-            ->on('subjects')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('subjects')
+                ->onDelete('set null');
 
             $table->foreign('department_id')
-            ->references('id')
-            ->on('departments')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('departments')
+                ->onDelete('set null');
 
             $table->foreign('squad_id')
-            ->references('id')
-            ->on('squads')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('squads')
+                ->onDelete('set null');
 
             $table->foreign('professor_id')
-            ->references('id')
-            ->on('professors')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('professors')
+                ->onDelete('set null');
 
             $table->foreign('professor_assistant_id')
-            ->references('id')
-            ->on('professor_assistants')
-            ->onDelete('set null');
-
+                ->references('id')
+                ->on('professor_assistants')
+                ->onDelete('set null');
         });
     }
 

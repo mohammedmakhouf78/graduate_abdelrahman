@@ -23,9 +23,9 @@ class CreateCommittiesTable extends Migration
 
 
             $table->foreign('floor_id')
-            ->references('id')
-            ->on('floors')
-            ->onDelete('set null');
+                ->references('id')
+                ->on('floors')
+                ->onDelete('set null');
         });
     }
 

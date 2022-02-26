@@ -20,14 +20,14 @@ class CreateExamObserversTable extends Migration
             $table->timestamps();
 
             $table->foreign('observer_id')
-            ->references('id')
-            ->on('observers')
-            ->onDelete('cascade');
+                ->references('id')
+                ->on('observers')
+                ->onDelete('cascade');
 
             $table->foreign('exam_id')
-            ->references('id')
-            ->on('exams')
-            ->onDelete('cascade');
+                ->references('id')
+                ->on('exams')
+                ->onDelete('cascade');
         });
     }
 

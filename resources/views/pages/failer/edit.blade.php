@@ -6,7 +6,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">تعديل الماليات</h3>
+            <h3 class="card-title">تعديل رسوب</h3>
         </div>
         @if (session()->has('success'))
         <div class="alert alert-success" id="success">
@@ -19,47 +19,30 @@
             @csrf
             @method('PUT')
 
-
-            {!! form_text('total','اجمالي_المصروفات_السنوية',$obj->total) !!}
-            @error('total')
+            {!! form_select('student_id','اسم الطالب',$obj->student_id) !!}
+            @error('student_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
-
-
-            {!! form_text('fixed_money','مصروفات_ثابتة',$obj->fixed_money) !!}
-            @error('fixed_money')
-            <p class="text-danger" id="myError">{{$message}}</p>
-            @enderror
-
-
-            {!! form_text('changable_money','مصروفات_متغيرة',$obj->changable_money) !!}
-            @error('changable_money')
-            <p class="text-danger" id="myError">{{$message}}</p>
-            @enderror
-
-
-            {!! form_text('discount','الخصم',$obj->discount) !!}
-            @error('discount')
-            <p class="text-danger" id="myError">{{$message}}</p>
-            @enderror
-
-            {!! form_text('deserved_money','المبلغ_المستحق',$obj->deserved_money) !!}
-            @error('deserved_money')
-            <p class="text-danger" id="myError">{{$message}}</p>
-            @enderror
-
 
             {!! form_select('squad_id','الفرقة',$obj->squad_id,'squad') !!}
             @error('squad_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            {!! form_select('employee_id','المسؤول عن الخزينة',$obj->employee_id,"full_name") !!}
-            @error('employee_id')
+            {!! form_select('subject_id1','اسم_المادة',$obj->subject_id1) !!}
+            @error('subject_id1')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
 
-            <!-- /.card-body -->
+            {!! form_select('subject_id2','اسم_المادة',$obj->subject_id2) !!}
+            @error('subject_id2')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+            {!! form_select('subject_id3','اسم_المادة',$obj->subject_id3) !!}
+            @error('subject_id3')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
 
             <div class="card-footer text-right">
                 <button type="submit" class="btn btn-primary swalDefaultSuccess">تاكيد</button>

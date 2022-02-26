@@ -24,7 +24,7 @@ class StudentController extends Controller
         $this->validation();
         $fileName = time() . "_student.jpeg";
 
-        $this->uplodadImage($request->image,$fileName,'students');
+        $this->uplodadImage($request->image, $fileName, 'students');
 
         $this->model::create(array_merge(
             $this->attReq(),
@@ -34,14 +34,14 @@ class StudentController extends Controller
     }
 
 
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $this->validation();
         $obj = $this->model::find($id);
 
         $fileName = time() . "_student.jpeg";
 
-        $this->uplodadImage($request->image,$fileName,'students',$obj->image);
+        $this->uplodadImage($request->image, $fileName, 'students', $obj->image);
 
         $obj->update(array_merge(
             $this->attReq(),
@@ -64,6 +64,10 @@ class StudentController extends Controller
             'name' => 'required|string',
             'mother_name' => 'required|string',
             'gender' => 'boolean',
+            'hold_number' => 'string',
+            'father_job' => 'string',
+            'mother_job' => 'string',
+            'religion' => 'string',
             'birth_date' => 'required|date',
             'study_year' => 'required|date',
             'coming_date' => 'required|date',
@@ -90,6 +94,10 @@ class StudentController extends Controller
         return [
             'payment_state_id' => request('payment_state_id'),
             'going_to' => request('going_to'),
+            'hold_number' => request('hold_number'),
+            'father_job' => request('father_job'),
+            'mother_job' => request('mother_job'),
+            'religion' => request('religion'),
             'coming_from' => request('coming_from'),
             'department_id' => request('department_id'),
             'squad_id' => request('squad_id'),
@@ -104,7 +112,7 @@ class StudentController extends Controller
             'coming_date' => request('coming_date'),
             'study_year' => request('study_year'),
             'name' => request('name'),
-            'gender' => request('gender',0),
+            'gender' => request('gender', 0),
             'birth_date' => request('birth_date'),
             'mother_name' => request('mother_name'),
 

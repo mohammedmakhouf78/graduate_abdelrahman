@@ -55,6 +55,10 @@
             @enderror
 
 
+            {!! form_select('employee_id','المسؤول عن الخزينة',0,"full_name") !!}
+            @error('employee_id')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
             <!-- /.card-body -->
 
             <div class="card-footer text-right">

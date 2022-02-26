@@ -21,19 +21,19 @@ class CreateProfessorProfessorAssistantsTable extends Migration
             $table->timestamps();
 
             $table->foreign('professor_id')
-            ->references('id')
-            ->on('professors')
-            ->onDelete('cascade');
+                ->references('id')
+                ->on('professors')
+                ->onDelete('cascade');
 
             $table->foreign('subject_id')
-            ->references('id')
-            ->on('subjects')
-            ->onDelete('cascade');
+                ->references('id')
+                ->on('subjects')
+                ->onDelete('cascade');
 
             $table->foreign('professor_assistant_id')
-            ->references('id')
-            ->on('professor_assistants')
-            ->onDelete('cascade');
+                ->references('id')
+                ->on('professor_assistants')
+                ->onDelete('cascade');
         });
     }
 

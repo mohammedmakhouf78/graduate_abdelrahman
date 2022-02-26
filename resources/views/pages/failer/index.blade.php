@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">ارقام التلفونات</h3>
+            <h3 class="card-title">الامتحانات</h3>
             <a href="{{route($model.'.create')}}" class="btn btn-success float-left">انشاء</a>
         </div>
         @if (session()->has('success'))
@@ -20,12 +20,11 @@
                 <thead>
                     <tr>
                         <th>الرقم_التسلسلي</th>
-                        <th>اجمالي_المصروفات_السنوية</th>
-                        <th>مصروفات_ثابتة</th>
-                        <th>مصروفات_متغيرة</th>
-                        <th>الخصم</th>
-                        <th>المبلغ_المستحق</th>
-                        <th>المسؤول_عن_الخزينة</th>
+                        <th>اسم_الطالب</th>
+                        <th>الفرقم</th>
+                        <th>الماده1</th>
+                        <th>الماده2</th>
+                        <th>الماده3</th>
                         <th>حذف وتعديل</th>
                     </tr>
                 </thead>
@@ -33,12 +32,11 @@
                     @foreach ($all as $index => $item)
                     <tr>
                         <td>{{++$index}}</td>
-                        <td>{{$item->total}}</td>
-                        <td>{{$item->fixed_money}}</td>
-                        <td>{{$item->changable_money}}</td>
-                        <td>{{$item->discount}}</td>
-                        <td>{{$item->deserved_money}}</td>
-                        <td>{{$item->employee->full_name}}</td>
+                        <td>{{$item->subject1->name}}</td>
+                        <td>{{$item->subject2->name}}</td>
+                        <td>{{$item->subject3->name}}</td>
+                        <td>{{$item->squad->squad}}</td>
+                        <td>{{$item->student->name}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
@@ -58,12 +56,11 @@
                 <tfoot>
                     <tr>
                         <th>الرقم_التسلسلي</th>
-                        <th>اجمالي_المصروفات_السنوية</th>
-                        <th>مصروفات_ثابتة</th>
-                        <th>مصروفات_متغيرة</th>
-                        <th>الخصم</th>
-                        <th>المبلغ_المستحق</th>
-                        <th>المسؤول عن الخزينة</th>
+                        <th>اسم_الطالب</th>
+                        <th>الفرقم</th>
+                        <th>الماده1</th>
+                        <th>الماده2</th>
+                        <th>الماده3</th>
                         <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>
@@ -83,8 +80,7 @@
 <script>
     $(function () {
       $("#example1").DataTable({
-        "responsive": false, "lengthChange": false, "autoWidth": false,
-        "scrollX": true,
+        "responsive": true, "lengthChange": true, "autoWidth": false,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({

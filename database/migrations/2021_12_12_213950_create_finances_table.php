@@ -15,6 +15,7 @@ class CreateFinancesTable extends Migration
     {
         Schema::create('finances', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('employee_id');
             $table->float('total');
             $table->float('fixed_money');
             $table->float('changable_money');
@@ -24,9 +25,14 @@ class CreateFinancesTable extends Migration
             $table->timestamps();
 
             $table->foreign('squad_id')
-            ->references('id')
-            ->on('squads')
-            ->onDelete('cascade');
+                ->references('id')
+                ->on('squads')
+                ->onDelete('cascade');
+
+            $table->foreign('employee_id')
+                ->references('id')
+                ->on('employees')
+                ->onDelete('cascade');
         });
     }
 

@@ -27,6 +27,29 @@
             @enderror
 
 
+            {!! form_text('hold_number','رقم القيد',$obj->hold_number) !!}
+            @error('hold_number')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
+            {!! form_text('father_job','وظيفة الأب',$obj->father_job) !!}
+            @error('father_job')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
+            {!! form_text('mother_job','وظيفة الأم',$obj->mother_job) !!}
+            @error('father_job')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
+            {!! form_text('religion','الديانة',$obj->religion) !!}
+            @error('religion')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
 
             {!! form_text('mother_name','اسم_الام',$obj->mother_name) !!}
             @error('mother_name')
