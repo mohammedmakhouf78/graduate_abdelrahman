@@ -306,14 +306,14 @@
                             <a href="{{route('failer.index')}}"
                                 class="nav-link {{currentRequest('exams/failer') ? 'active' : ''}}">
                                 <i class="fas fa-check-double ml-3 mr-3"></i>
-                                <p>مواد وسنين التخلف</p>
+                                <p>مواد التخلف</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('failer_subject')}}"
-                                class="nav-link {{currentRequest('exams/failer_subject') ? 'active' : ''}}">
+                            <a href="{{route('fyear.index')}}"
+                                class="nav-link {{currentRequest('exams/fyear') ? 'active' : ''}}">
                                 <i class="fas fa-check-double ml-3 mr-3"></i>
-                                <p>مواد التخلف</p>
+                                <p>سنين التخلف</p>
                             </a>
                         </li>
                         <li class="nav-item">

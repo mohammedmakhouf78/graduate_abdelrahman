@@ -35,11 +35,7 @@
         <section class="content">
             <div class="container-fluid">
 
-                <!-- Main row -->
-                <div class="row">
-                    @yield('content')
-                </div>
-                <!-- /.row -->
+                @yield('content')
             </div>
             <!--/. container-fluid -->
         </section>

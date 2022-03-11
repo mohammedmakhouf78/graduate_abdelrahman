@@ -26,6 +26,12 @@
             @enderror
 
 
+            {!! form_text('number',$obj->value,'عدد_الاقساط') !!}
+            @error('number')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+
+
             {!! form_date('pay_date',$obj->pay_date,'تاريخ_الدفع') !!}
             @error('pay_date')
             <p class="text-danger" id="myError">{{$message}}</p>

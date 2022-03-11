@@ -21,6 +21,7 @@
                     <tr>
                         <th>الرقم_التسلسلي</th>
                         <th>المبلغ_المدفوع</th>
+                        <th>عدد_الاقساط</th>
                         <th>المبلغ_المستحق</th>
                         <th>مبالغ_من_سنوات_سابقة</th>
                         <th>مبلغ_القسط</th>
@@ -33,8 +34,9 @@
                 <tbody>
                     @foreach ($all as $index => $item)
                     <tr>
-                        <td>{{++$index}}</td>
+                        <td>{{$item->id}}</td>
                         <td>{{$item->paid}}</td>
+                        <td>{{$item->installment->number ?? ""}}</td>
                         <td>{{$item->rest_money}}</td>
                         <td>{{$item->money_from_prev_years}}</td>
                         <td>{{$item->finance_id}}</td>
@@ -61,6 +63,7 @@
                     <tr>
                         <th>الرقم_التسلسلي</th>
                         <th>المبلغ_المدفوع</th>
+                        <th>عدد_الاقساط</th>
                         <th>المبلغ_المستحق</th>
                         <th>مبالغ_من_سنوات_سابقة</th>
                         <th>إجمالي_المصروفات_السنوية</th>
@@ -86,7 +89,8 @@
 <script>
     $(function () {
       $("#example1").DataTable({
-        "responsive": true, "lengthChange": true, "autoWidth": false,
+        "responsive": false, "lengthChange": true, "autoWidth": false,
+        "scrollX": true,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({

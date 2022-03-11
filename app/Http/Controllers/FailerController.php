@@ -20,12 +20,6 @@ class FailerController extends Controller
         $this->modelName = strtolower(class_basename($model));
     }
 
-    public function failer_subject()
-    {
-        $all = Student::with(['failers.squad', 'failers.subject'])->get();
-        return view('pages.failer.fail_subject', compact('all'));
-    }
-
     private function validation()
     {
         request()->validate([

@@ -15,8 +15,10 @@ class SitnumberFactory extends Factory
     {
         return [
             'student_id' => rand(1, 9),
-            'squad_id' => rand(1, 9),
-            'sit_number' => $this->faker->randomNumber(7),
+            'sit_number1' => $this->faker->randomNumber(7),
+            'sit_number2' => $this->faker->randomNumber(7),
+            'sit_number3' => $this->faker->randomNumber(7),
+            'sit_number4' => $this->faker->randomNumber(7),
         ];
     }
 }

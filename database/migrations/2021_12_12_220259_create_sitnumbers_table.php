@@ -16,18 +16,15 @@ class CreateSitnumbersTable extends Migration
         Schema::create('sitnumbers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('student_id')->nullable();
-            $table->unsignedBigInteger('squad_id')->nullable();
-            $table->integer('sit_number');
+            $table->integer('sit_number1')->nullable();
+            $table->integer('sit_number2')->nullable();
+            $table->integer('sit_number3')->nullable();
+            $table->integer('sit_number4')->nullable();
             $table->timestamps();
 
             $table->foreign('student_id')
             ->references('id')
             ->on('students')
-            ->onDelete('set null');
-
-            $table->foreign('squad_id')
-            ->references('id')
-            ->on('squads')
             ->onDelete('set null');
         });
     }

@@ -17,6 +17,7 @@ use App\Models\ExamObserver;
 use App\Models\Failer;
 use App\Models\Finance;
 use App\Models\Floor;
+use App\Models\Fyear;
 use App\Models\Installment;
 use App\Models\Nationality;
 use App\Models\Note;
@@ -84,6 +85,7 @@ class DatabaseSeeder extends Seeder
         Installment::factory(10)->create();
         Decision::factory(10)->create();
         Failer::factory(10)->create();
+        Fyear::factory(10)->create();
         User::create([
             'email' => 'admin@admin.com',
             'password' => Hash::make('123456')

@@ -14,4 +14,9 @@ class ExamMarking extends Model
     {
         return $this->belongsTo(Exam::class,'exam_id');
     }
+
+    public function student()
+    {
+        return $this->belongsTo(Student::class,'student_id');
+    }
 }

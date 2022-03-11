@@ -36,7 +36,7 @@
 
 
 
-            {!! form_select('exam_id','اسم_مادة_الامتحان',0,$obj->exam_id) !!}
+            {!! form_select('exam_id','اسم_مادة_الامتحان',$obj->exam_id) !!}
             @error('exam_id')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

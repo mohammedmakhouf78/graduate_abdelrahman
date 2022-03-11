@@ -15,6 +15,7 @@ class InstallmentFactory extends Factory
     {
         return [
             'value' => $this->faker->randomFloat(2, 0, 10000),
+            'number' => $this->faker->numberBetween(1,5),
             'pay_date' => $this->faker->date(),
             'student_finance_id' => rand(1, 9),
         ];

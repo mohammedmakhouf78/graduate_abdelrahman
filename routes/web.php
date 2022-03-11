@@ -16,6 +16,7 @@ use App\Http\Controllers\ExamObserverController;
 use App\Http\Controllers\FailerController;
 use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\FloorController;
+use App\Http\Controllers\FyearController;
 use App\Http\Controllers\InstallmentController;
 use App\Http\Controllers\NationalityController;
 use App\Http\Controllers\NoteController;
@@ -107,6 +108,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('sitnumber', SitnumberController::class); //
         Route::get('/failer_subject', [FailerController::class, 'failer_subject'])->name('failer_subject');
         Route::resource('failer', FailerController::class); //
+        Route::resource('fyear', FyearController::class); //
 
     });
 

@@ -19,4 +19,9 @@ class StudentFinance extends Model
     {
         return $this->belongsTo(Student::class,'student_id');
     }
+
+    public function installment()
+    {
+        return $this->belongsTo(Installment::class,'id','student_finance_id');
+    }
 }

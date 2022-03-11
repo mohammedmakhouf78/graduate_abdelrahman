@@ -21,6 +21,7 @@
                     <tr>
                         <th>الرقم_التسلسلي</th>
                         <th>مبلغ_القسط</th>
+                        <th>عدد_الاقساط</th>
                         <th>تاريخ_الدفع</th>
                         <th>ماليات_الطالب</th>
                         <th>حذف وتعديل</th>
@@ -31,6 +32,7 @@
                     <tr>
                         <td>{{++$index}}</td>
                         <td>{{$item->value}}</td>
+                        <td>{{$item->number}}</td>
                         <td>{{$item->pay_date}}</td>
                         <td>{{$item->student_finance_id}}</td>
                         <td class="text-right">
@@ -53,6 +55,7 @@
                     <tr>
                         <th>الرقم_التسلسلي</th>
                         <th>مبلغ_القسط</th>
+                        <th>عدد_الاقساط</th>
                         <th>تاريخ_الدفع</th>
                         <th>ماليات_الطالب</th>
                         <th>حذف وتعديل</th>

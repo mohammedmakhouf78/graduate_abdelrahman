@@ -18,11 +18,13 @@
         <div class="card-body">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                    <tr> 
+                    <tr>
                         <th>الرقم_التسلسلي</th>
                         <th>اسم_الطالب_رباعيا</th>
-                        <th>الفرقة_المقيد_بها</th>
-                        <th>رقم_جلوس_الطالب</th>
+                        <th>1رقم_جلوس_الطالب</th>
+                        <th>2رقم_جلوس_الطالب</th>
+                        <th>3رقم_جلوس_الطالب</th>
+                        <th>4رقم_جلوس_الطالب</th>
                         <th>حذف وتعديل</th>
                     </tr>
                 </thead>
@@ -31,8 +33,10 @@
                     <tr>
                         <td>{{++$index}}</td>
                         <td>{{$item->student->name}}</td>
-                        <td>{{$item->squad->squad}}</td>
-                        <td>{{$item->sit_number}}</td>
+                        <td>{{$item->sit_number1}}</td>
+                        <td>{{$item->sit_number2}}</td>
+                        <td>{{$item->sit_number3}}</td>
+                        <td>{{$item->sit_number4}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
@@ -50,11 +54,13 @@
                     @endforeach
                 </tbody>
                 <tfoot>
-                    <tr> 
+                    <tr>
                         <th>الرقم_التسلسلي</th>
                         <th>اسم_الطالب_رباعيا</th>
-                        <th>الفرقة_المقيد_بها</th>
-                        <th>رقم_جلوس_الطالب</th>
+                        <th>1رقم_جلوس_الطالب</th>
+                        <th>2رقم_جلوس_الطالب</th>
+                        <th>3رقم_جلوس_الطالب</th>
+                        <th>4رقم_جلوس_الطالب</th>
                         <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>

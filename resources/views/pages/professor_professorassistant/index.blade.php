@@ -19,7 +19,7 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        
+
                         <th>الرقم_التسلسلي</th>
                         <th>اسم_الدكتور_رباعيا</th>
                         <th>اسم_المادة</th>
@@ -33,7 +33,7 @@
                         <td>{{++$index}}</td>
                         <td>{{$item->professor->employee->full_name}}</td>
                         <td>{{$item->subject->name}}</td>
-                        <td>{{$item->professorAssistant->employee->full_name}}</td
+                        <td>{{$item->professorAssistant->employee->full_name}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>

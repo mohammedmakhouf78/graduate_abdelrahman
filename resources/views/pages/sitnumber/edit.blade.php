@@ -26,13 +26,19 @@
             @enderror
 
 
-            {!! form_select('squad_id','الفرقة_المقيد_بها',$obj->squad_id,'squad') !!}
-            @error('squad_id')
+            {!! form_text('sit_number1','1رقم_جلوس_الطالب',$obj->sit_number1) !!}
+            @error('sit_number1')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror
-
-
-            {!! form_text('sit_number','رقم_جلوس_الطالب',$obj->sit_number) !!}
+            {!! form_text('sit_number2','2رقم_جلوس_الطالب',$obj->sit_number2) !!}
+            @error('sit_number')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+            {!! form_text('sit_number3','3رقم_جلوس_الطالب',$obj->sit_number3) !!}
+            @error('sit_number')
+            <p class="text-danger" id="myError">{{$message}}</p>
+            @enderror
+            {!! form_text('sit_number4','4رقم_جلوس_الطالب',$obj->sit_number4) !!}
             @error('sit_number')
             <p class="text-danger" id="myError">{{$message}}</p>
             @enderror

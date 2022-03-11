@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">مراقبين الامتحانات</h3>
+            <h3 class="card-title">الامتحانات</h3>
             <a href="{{route($model.'.create')}}" class="btn btn-success float-left">انشاء</a>
         </div>
         @if (session()->has('success'))
@@ -20,10 +20,10 @@
                 <thead>
                     <tr>
                         <th>الرقم_التسلسلي</th>
-                        <th>الدرجة</th>
-                        <th>تاريخ_التصحيح</th>
-                        <th>اسم الإختبار</th>
-                        <th>اسم الطالب</th>
+                        <th>اسم_الطالب</th>
+                        <th>سنة التخلف1</th>
+                        <th>سنة التخلف2</th>
+                        <th>سنة التخلف3</th>
                         <th>حذف وتعديل</th>
                     </tr>
                 </thead>
@@ -31,10 +31,10 @@
                     @foreach ($all as $index => $item)
                     <tr>
                         <td>{{++$index}}</td>
-                        <td>{{$item->degree}}</td>
-                        <td>{{$item->marking_date}}</td>
-                        <td>{{$item->exam->name}}</td>
                         <td>{{$item->student->name}}</td>
+                        <td>{{$item->squad1->squad}}</td>
+                        <td>{{$item->squad2->squad}}</td>
+                        <td>{{$item->squad3->squad}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
@@ -54,10 +54,10 @@
                 <tfoot>
                     <tr>
                         <th>الرقم_التسلسلي</th>
-                        <th>الدرجة</th>
-                        <th>تاريخ_التصحيح</th>
-                        <th>اسم الإختبار</th>
-                        <th>اسم الطالب</th>
+                        <th>اسم_الطالب</th>
+                        <th>سنة التخلف1</th>
+                        <th>سنة التخلف2</th>
+                        <th>سنة التخلف3</th>
                         <th>حذف وتعديل</th>
                     </tr>
                 </tfoot>

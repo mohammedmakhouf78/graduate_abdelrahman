@@ -23,6 +23,7 @@ class InstallmentController extends Controller
     {
         request()->validate([
             'value' => 'required|numeric',
+            'number' => 'required|numeric',
             'pay_date' => 'required|date',
             'student_finance_id' => 'required|int|exists:student_finances,id',
         ]);
@@ -32,6 +33,7 @@ class InstallmentController extends Controller
     {
         return [
             'value' => request('value'),
+            'number' => request('number'),
             'pay_date' => request('pay_date'),
             'student_finance_id' => request('student_finance_id'),
         ];

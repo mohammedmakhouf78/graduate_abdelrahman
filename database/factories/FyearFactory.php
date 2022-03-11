@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class FailerFactory extends Factory
+class FyearFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,11 +14,10 @@ class FailerFactory extends Factory
     public function definition()
     {
         return [
-            'squad_id' => rand(1, 9),
             'student_id' => rand(1, 9),
-            'subject_id1' => rand(1, 9),
-            'subject_id2' => rand(1, 9),
-            'subject_id3' => rand(1, 9),
+            'squad_id1' => rand(1, 9),
+            'squad_id2' => rand(1, 9),
+            'squad_id3' => rand(1, 9),
         ];
     }
 }

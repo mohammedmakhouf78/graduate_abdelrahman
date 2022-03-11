@@ -33,7 +33,7 @@
                         <td>{{$item->full_name}}</td>
                         <td>{{$item->birth_day}}</td>
                         <td>
-                            <img style="width: 100% ; height:150px;object-fit:cover"
+                            <img style="width: 100px ; height:100px;object-fit:cover"
                                 src="{{asset('images/employees/' .$item->image)}}" alt="">
                         </td>
                         <td class="text-right">

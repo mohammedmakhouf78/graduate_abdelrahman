@@ -22,18 +22,22 @@ class SitnumberController extends Controller
     private function validation()
     {
         request()->validate([
-            'squad_id' => 'nullable|int|exists:squads,id',
             'student_id' => 'nullable|int|exists:students,id',
-            'sit_number' => 'required|int',
+            'sit_number1' => 'nullable|int',
+            'sit_number2' => 'nullable|int',
+            'sit_number3' => 'nullable|int',
+            'sit_number4' => 'nullable|int',
         ]);
     }
 
     public function attReq()
     {
         return [
-            'squad_id' => request('squad_id'),
             'student_id' => request('student_id'),
-            'sit_number' => request('sit_number'),
+            'sit_number1' => request('sit_number'),
+            'sit_number2' => request('sit_number'),
+            'sit_number3' => request('sit_number'),
+            'sit_number4' => request('sit_number'),
         ];
     }
 }

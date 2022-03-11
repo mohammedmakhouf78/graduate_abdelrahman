@@ -32,11 +32,11 @@
                     @foreach ($all as $index => $item)
                     <tr>
                         <td>{{++$index}}</td>
+                        <td>{{$item->squad->squad}}</td>
+                        <td>{{$item->student->name}}</td>
                         <td>{{$item->subject1->name}}</td>
                         <td>{{$item->subject2->name}}</td>
                         <td>{{$item->subject3->name}}</td>
-                        <td>{{$item->squad->squad}}</td>
-                        <td>{{$item->student->name}}</td>
                         <td class="text-right">
                             <a class="btn btn-primary" href="{{route($model.'.edit',$item->id)}}">
                                 <i class="fas fa-pen"></i>
